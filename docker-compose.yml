@@ -1,0 +1,10 @@
+version: '3' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  jekyll:
+    image: jekyll/jekyll:4
+    volumes:
+      - ./:/srv/jekyll:Z
+    environment:
+      - BUNDLE_PATH=vendor/bundle
