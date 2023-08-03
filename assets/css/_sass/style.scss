@@ -22,7 +22,6 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: bold;
   line-height: 1.8;
   margin: 0;
   text-transform: inherit;
@@ -106,13 +105,35 @@ blockquote {
   font-style: italic;
 }
 
-
-.headline, .post-headline {
-  font-size: 2em;
+.site-title {
+  font-size: 2.5em;
   margin-bottom: -0.4em;
 
   @include media-query($on-palm) {
     font-size: 2em;
+  }
+}
+
+.site-description {
+  font-size: .8em;
+  font-weight: lighter;
+}
+
+#recent-articles ul {
+  margin: 0.3em 0 0 0;
+}
+
+#recent-articles .recent-article-link {
+  margin: 0 0.5em 0 0;
+}
+
+
+.headline, .post-headline {
+  font-size: 1.5em;
+  margin-bottom: -0.4em;
+
+  @include media-query($on-palm) {
+    font-size: 1.5em;
   }
 }
 

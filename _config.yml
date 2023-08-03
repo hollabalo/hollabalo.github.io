@@ -3,8 +3,10 @@
 title: JM Gerona
 description: containers | cloud | serverless
 
-baseurl: /gradfolio #name of GitHub repository
+baseurl: "" #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
+
+timezone: Asia/Manila
 
 # Pagination
 paginate: 4
