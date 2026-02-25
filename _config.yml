@@ -1,10 +1,10 @@
 ### your site title here
 
 title: JM Gerona
-description: containers | cloud | serverless
+description: Solutions Architect | Backend Developer | Serverless | Containerization | CI/CD
 
 baseurl: "" #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
+url: "https://hollabalo.github.io" #custom url to be used instead of GitHub repository
 
 timezone: Asia/Manila
 
@@ -16,7 +16,7 @@ paginate_path: /blog/page:num/
 # Social media links in footer
 linkedin: jmdgerona
 stackoverflow: makalshrek
-github: jmgerona
+github: hollabalo
 
 # Markdown
 highlighter: rouge
@@ -63,12 +63,12 @@ collections:
     output: true
     permalink: /projects/:name/
     order:
-      - shortProject.md
-      - longerProjectTitle.md
-      - redirect.md
-      - project4.md
-      - project5.md
-      - project6.md
+      - cicd.md
+      - customer-api.md
+      - queueing-app.md
+      - chat-app.md
+      - voting-api.md
+      - oneraimol.md
 
   experiences:
     output: false

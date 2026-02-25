@@ -1,20 +1,20 @@
 ---
-title: my resume
+title: About / Resume
 layout: default
 permalink: /about
 published: true
 ---
 ## General Tidbits
+
 Hello. Thank you for your interest.
 
-First off, JM means John Michael. I'm a senior software engineer based in Manila, Philippines.
+First off, **JM** means John Michael. I'm a Solutions Architect and Backend Developer based in Manila, Philippines, with a strong focus on serverless architectures, containerization, and CI/CD automation.
 
-I have more than a decade of experience on software development, system maintenance, and management. Fin-tech, telco, 
-and banking are the domains I have extensively worked on.
+I have more than a decade of experience in software development, system design, and engineering management. Fintech, telco, and banking are the domains I've worked in extensively.
 
-I currently work as a Java backend engineer for a top fintech company. But I had some people management stint as well.
- 
-To check out some of my notable projects (details probably redacted due to NDA), check the [projects](/projects) section.
+I currently work as a **Master Software Engineer** at GCash (Mynt — Globe Fintech Innovations, Inc.), one of the Philippines' top digital finance platforms, where I contribute to platform engineering and cloud-native architecture within the GC Solutions organization. I also had a people management stint as Domain Lead overseeing a cross-functional engineering team.
+
+To check out some of my notable projects (details may be redacted due to NDA), see the [projects](/projects) section.
 
 ***
 
@@ -31,13 +31,20 @@ To check out some of my notable projects (details probably redacted due to NDA),
    {% endif %}
 {% endfor %}
 </div>
- 
+
 ## Certifications
 <div class="certification-item">
-None
+
+- **AWS Certified Solutions Architect – Associate**
+- **Certified Kubernetes Application Developer (CKAD)**
+- **Kubernetes and Cloud Native Associate (KCNA)**
+
 </div>
 
 ## Education
 <div class="education-item">
-    Adamson
+
+**Adamson University** — Manila, Philippines<br>
+Bachelor of Science in Computer Science
+
 </div>

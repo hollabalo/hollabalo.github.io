@@ -3,9 +3,20 @@ layout: home
 permalink: /
 published: true
 ---
-You have found this page. Congratulations.
+Hi, I'm **JM** (John Michael) — a Solutions Architect and Backend Developer based in Manila, Philippines.
 
-I have nothing to say for now, but here are my technical stats that might be useful for some. _(Hello headhunters and potential clients. :grin: )_
+I specialize in **serverless architectures**, **containerization**, and **CI/CD automation**. With over a decade of experience across fintech, banking, and telecommunications, I design and build resilient, cloud-native systems at scale.
+
+Currently a **Master Software Engineer** at [GCash](https://www.gcash.com/) — one of the Philippines' leading fintech platforms — where I contribute to platform infrastructure, cloud migrations, and engineering best practices within the [GC Solutions](https://github.com/GC-Solutions) engineering organization.
+
+I hold certifications in:
+- **AWS Solutions Architect Associate**
+- **Certified Kubernetes Application Developer (CKAD)**
+- **Kubernetes and Cloud Native Associate (KCNA)**
+
+**Core skills:** Java · Go · JavaScript · Spring Boot · AWS · Kubernetes · GitHub Actions · ArgoCD · gRPC · Microservices · Event-Driven Architecture · MySQL · PostgreSQL · DynamoDB · MongoDB
+
+---
 
 ### Coding activity for the year
 
@@ -14,4 +25,3 @@ I have nothing to say for now, but here are my technical stats that might be use
 ### Languages used in last 30 days
 
 <div class="coding-data"><embed src="https://wakatime.com/share/@makalshrek/340ca497-6e30-42ee-b022-6c2df06b6541.svg" /></div>
-   
