@@ -8,7 +8,12 @@ published: true
   <div class="hero-avatar">JG</div>
   <div class="hero-info">
     <h1>JM Gerona</h1>
-    <p class="hero-role">Master Software Engineer &middot; GCash / Mynt</p>
+    <p class="hero-role">
+      <span class="hero-prompt">❯</span>
+      Master Software Engineer
+      <span class="hero-at">@</span>
+      GCash / Mynt
+    </p>
     <p class="hero-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Manila, Philippines</p>
     <p class="hero-bio">
       Senior backend engineer with 12+ years building fintech and telco platforms.
@@ -25,7 +30,7 @@ published: true
       <a class="hero-link-btn" href="https://stackoverflow.com/users/makalshrek" target="_blank">
         <i class="fab fa-stack-overflow"></i> Stack Overflow
       </a>
-      <a class="hero-link-btn" href="/about/">View Resume &rarr;</a>
+      <a class="hero-link-btn hero-link-primary" href="/about/">View Resume &rarr;</a>
     </div>
   </div>
 </section>
