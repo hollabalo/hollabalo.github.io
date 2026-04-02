@@ -1,21 +1,15 @@
 /* Profile image (legacy) */
 .profile {
-  border: 2px solid $border-color;
+  border: 2px solid var(--border);
   margin: 0 1rem 1rem;
   border-radius: 50%;
-
-  @media (prefers-color-scheme: light) {
-    border-color: $border-color-light;
-  }
 }
 
-.left { float: left; }
+.left  { float: left; }
 .right { float: right; }
 
 @include media-query($on-phone) {
-  .profile {
-    width: 40%;
-  }
+  .profile { width: 40%; }
 }
 
 .home-contents h3 {
@@ -24,7 +18,7 @@
 
 /* WakaTime coding stats embeds */
 .coding-data {
-  background-color: rgba($brand-color, 0.12);
+  background-color: var(--accent-dim);
   border-radius: 10px;
   margin-bottom: 1em;
 }

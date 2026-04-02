@@ -1,37 +1,74 @@
-// Typography
+// ============================================================
+// TYPOGRAPHY & LAYOUT (SCSS variables — used in calculations)
+// ============================================================
+
 $base-font-family: 'Work Sans', sans-serif;
+$mono-font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 $base-font-size:   17px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.7;
+$base-line-height: 1.75;
+$spacing-unit:     30px;
+$content-width:    800px;
+$on-phone:         450px;
+$on-palm:          660px;
+$on-laptop:        1000px;
 
-$spacing-unit: 30px;
 
-// Dark theme (primary — default)
-$body-bg:       #1c2028;
-$surface-color: #252a33;
-$surface-hover: #2e3340;
-$border-color:  #363c48;
-$text-color:    #e2e5eb;
-$text-muted:    #8892a4;
-$brand-color:   #60c17d;
-$brand-light:   #80d496;
+// ============================================================
+// COLOR TOKENS via CSS Custom Properties
+// Dark mode is the default (no media query needed).
+// Light mode overrides via prefers-color-scheme: light.
+// ============================================================
 
-// Derived aliases used by existing code
-$background-color: $body-bg;
-$light-gray:       $border-color;
-$projectbox-text:  $text-color;
-$projectbox:       $surface-color;
-$projectbox-dark:  $surface-hover;
+:root {
+  // Dark palette
+  --bg:            #13161b;
+  --surface:       #1c2130;
+  --surface-hover: #242d3f;
+  --border:        #29334a;
+  --text:          #dde1ea;
+  --text-muted:    #7a8599;
+  --accent:        #5ecc7b;
+  --accent-dim:    rgba(94, 204, 123, 0.12);
+  --accent-glow:   rgba(94, 204, 123, 0.18);
+  --shadow-card:   rgba(0, 0, 0, 0.35);
+  --shadow-hover:  rgba(94, 204, 123, 0.16);
+}
 
-// Light theme overrides (applied inside prefers-color-scheme: light blocks)
-$body-bg-light:       #f8f9fa;
-$surface-color-light: #ffffff;
-$surface-hover-light: #f1f3f5;
-$border-color-light:  #e5e7eb;
-$text-color-light:    #1e2229;
-$text-muted-light:    #6b7280;
+@media (prefers-color-scheme: light) {
+  :root {
+    // Light palette — same component shapes, different colors
+    --bg:            #f5f6f8;
+    --surface:       #ffffff;
+    --surface-hover: #edf0f4;
+    --border:        #dde0e6;
+    --text:          #1a1d24;
+    --text-muted:    #6b7280;
+    --accent:        #2f9e52;      // darker green — readable on white bg
+    --accent-dim:    rgba(47, 158, 82, 0.10);
+    --accent-glow:   rgba(47, 158, 82, 0.14);
+    --shadow-card:   rgba(0, 0, 0, 0.08);
+    --shadow-hover:  rgba(47, 158, 82, 0.13);
+  }
+}
 
-// Legacy dark aliases (kept for any remaining references)
-$body-bg-dark:      $body-bg;
-$text-color-dark:   $text-muted;
+
+// ============================================================
+// SCSS SHIMS for legacy partials that use $variables
+// These map old names → CSS vars wherever possible.
+// Functions like darken()/lighten() cannot use CSS vars,
+// so those sites use the raw hex literals defined above.
+// ============================================================
+
+// Light-gray was used as border color in older partials
+$light-gray: var(--border);
+
+// Used in footer-social.scss for email button — keep hardcoded
+$brand-color-hex: #5ecc7b;
+$brand-dark-hex:  #2f9e52;
+
+// projectbox values — used in projects.scss hover tile
+$projectbox:       var(--surface);
+$projectbox-dark:  var(--surface-hover);
+$projectbox-text:  var(--text);
