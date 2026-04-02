@@ -1,22 +1,37 @@
+// Typography
 $base-font-family: 'Work Sans', sans-serif;
-$base-font-size:   18px;
+$base-font-size:   17px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.7;
 
-$spacing-unit:     30px;
-$light-gray: gray;
-$text-color:       #333;
-$background-color: #fdfdfd;
-$brand-color:      #60c17d;
-$projectbox-text:  #1e2126;
+$spacing-unit: 30px;
 
-// Color scheme for light
-$body-bg: #fdfdfd;
-$projectbox: #c3e1c9;
-$text-color: #333;
+// Dark theme (primary — default)
+$body-bg:       #1c2028;
+$surface-color: #252a33;
+$surface-hover: #2e3340;
+$border-color:  #363c48;
+$text-color:    #e2e5eb;
+$text-muted:    #8892a4;
+$brand-color:   #60c17d;
+$brand-light:   #80d496;
 
-// Color scheme for dark modes
-$body-bg-dark: #23272d;
-$projectbox-dark: lighten(#98a0ac, 2%);
-$text-color-dark: #98a0ac;
+// Derived aliases used by existing code
+$background-color: $body-bg;
+$light-gray:       $border-color;
+$projectbox-text:  $text-color;
+$projectbox:       $surface-color;
+$projectbox-dark:  $surface-hover;
+
+// Light theme overrides (applied inside prefers-color-scheme: light blocks)
+$body-bg-light:       #f8f9fa;
+$surface-color-light: #ffffff;
+$surface-hover-light: #f1f3f5;
+$border-color-light:  #e5e7eb;
+$text-color-light:    #1e2229;
+$text-muted-light:    #6b7280;
+
+// Legacy dark aliases (kept for any remaining references)
+$body-bg-dark:      $body-bg;
+$text-color-dark:   $text-muted;

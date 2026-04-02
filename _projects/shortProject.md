@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Short Project
-description: description of the short project which is long enough
+description: A focused microservice built with Java and Spring Boot, deployed on Kubernetes. Details redacted under NDA.
+featured: true
 ---
 Example modified from [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html){:target="_blank"}.
 

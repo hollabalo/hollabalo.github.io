@@ -2,4 +2,115 @@
 layout: default
 ---
 
-{% for exp in site.work_experiences %} {% if exp.visibility == true %}
+<div class="resume-page">
+
+  <!-- Profile Header -->
+  <section class="about-header">
+    <h1>{{ site.title }}</h1>
+    <p class="about-role">{{ site.tagline }}</p>
+    <p class="about-location"><i class="fas fa-map-marker-alt"></i> {{ site.location }}</p>
+    <p class="about-bio">
+      Senior software engineer with 10+ years of experience in fintech, telco, and banking domains.
+      Currently at GCash / Mynt as a Master Software Engineer, leading backend platform work for one of
+      Southeast Asia's largest digital wallets. Specializes in Java, distributed systems, and cloud-native
+      infrastructure on Kubernetes and AWS.
+    </p>
+    <div class="about-links">
+      {% if site.linkedin %}
+        <a class="hero-link-btn" href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      {% endif %}
+      {% if site.github %}
+        <a class="hero-link-btn" href="https://www.github.com/{{ site.github }}" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      {% endif %}
+      {% if site.stackoverflow %}
+        <a class="hero-link-btn" href="https://stackoverflow.com/users/{{ site.stackoverflow }}" target="_blank">
+          <i class="fab fa-stack-overflow"></i> Stack Overflow
+        </a>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">Work Experience</h2>
+    <div class="ResumeContainer">
+      {% for experience in site.experiences reversed %}
+        {% if experience.visible == true %}
+          <div class="experience-item">
+            <h3 class="company">{{ experience.company }}</h3>
+            <h4 class="description">{{ experience.position }} &#124; <span>{{ experience.duration }}</span></h4>
+            {% if experience.tech %}
+              <div class="exp-tech-tags">
+                {% for t in experience.tech %}
+                  <span class="skill-tag">{{ t }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="details">{{ experience.content }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">Skills</h2>
+    <div class="skills-groups">
+      {% if site.skills.languages %}
+        <div class="skills-group">
+          <h4>Languages</h4>
+          <div class="skills-strip">
+            {% for s in site.skills.languages %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if site.skills.cloud %}
+        <div class="skills-group">
+          <h4>Cloud &amp; Infrastructure</h4>
+          <div class="skills-strip">
+            {% for s in site.skills.cloud %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if site.skills.frameworks %}
+        <div class="skills-group">
+          <h4>Frameworks</h4>
+          <div class="skills-strip">
+            {% for s in site.skills.frameworks %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if site.skills.tools %}
+        <div class="skills-group">
+          <h4>Tools</h4>
+          <div class="skills-strip">
+            {% for s in site.skills.tools %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">Education</h2>
+    <div class="education-item">
+      <h3>Adamson University</h3>
+      <p>Bachelor of Science in Computer Science</p>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="resume-section">
+    <h2 class="resume-section-title">Certifications</h2>
+    <p class="certification-item">In progress — check back soon.</p>
+  </section>
+
+</div>
+
+{{ content }}

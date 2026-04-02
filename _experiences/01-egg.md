@@ -1,8 +1,9 @@
 ---
 visible: true
 company: Yondu, Inc. (formerly Entertainment Gateway Group)
-duration: April 2012 - August 2013 
-position: Application developer
+duration: April 2012 - August 2013
+position: Application Developer
+tech: [Java, Shell, AWK, IBM WebSphere, Git, SOA]
 ---
 Assigned to the technical side of customer sales and after sales, with the primary goal of getting more revenues via
 call, text and data promos. Notable achievements are:

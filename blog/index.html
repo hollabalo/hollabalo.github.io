@@ -1,16 +1,24 @@
 ---
 layout: default
+title: Articles
 ---
+
+<h2 class="section-heading">Articles</h2>
 
 <div class="article-list">
   {% for post in paginator.posts %}
-    <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <p>{{post.excerpt | strip_html}}</p>
-    {% unless forloop.last %}<hr />{% endunless %}
+    <div class="article-preview" style="padding: 1em 0; border-bottom: 1px solid var(--border, #363c48);">
+      <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+    {% if post.excerpt %}
+      <p style="font-size:0.875em; color: #8892a4; margin: 0.25em 0 0.75em 0;">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    {% endif %}
+  {% else %}
+    <p class="certification-item">No articles yet &mdash; stay tuned.</p>
   {% endfor %}
 </div>
 
-<!-- pagination -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -23,7 +31,7 @@ layout: default
     {% if page == paginator.page %}
       <span>{{ page }}</span>
     {% elsif page == 1 %}
-      <a href="{{site.baseurl}}/blog">{{ page }}</a>
+      <a href="{{ site.baseurl }}/blog">{{ page }}</a>
     {% else %}
       <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}

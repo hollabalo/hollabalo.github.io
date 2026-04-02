@@ -1,7 +1,8 @@
 ---
 layout: post
-title: A longer Project Title
-description: short project description
+title: A Longer Project Title
+description: Backend platform project involving event-driven architecture with Kafka and distributed caching. Details redacted under NDA.
+featured: true
 ---
 
 Example modified from [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html){:target="_blank"}.

@@ -1,20 +1,107 @@
+/* =============================================
+   RESUME / EXPERIENCE TIMELINE
+   ============================================= */
+
 .ResumeContainer {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 700px;
 }
 
 .ResumeContainer .experience-item {
-  margin-bottom: 1em;
+  position: relative;
+  padding-left: 1.5em;
+  padding-bottom: 0.25em;
+  margin-bottom: 2em;
+  border-left: 2px solid $brand-color;
+
+  /* Timeline dot */
+  &::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $brand-color;
+  }
 }
 
 .ResumeContainer p {
-  margin: 0 0.1em 0 0;
+  margin: 0 0 0.1em;
 }
 
-.ResumeContainer .description span {
-  color: #676565;
+.ResumeContainer h3.company {
+  font-size: 1em;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.1em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
+  }
+}
+
+.ResumeContainer h4.description {
+  font-size: 0.875em;
+  font-weight: 400;
+  color: $brand-color;
+  margin-bottom: 0.4em;
+
+  span {
+    color: $text-muted;
+    font-weight: 400;
+
+    @media (prefers-color-scheme: light) {
+      color: $text-muted-light;
+    }
+  }
+}
+
+.ResumeContainer .details {
+  font-size: 0.875em;
+  color: $text-muted;
+  line-height: 1.65;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
 }
 
 .ResumeContainer ul {
-  margin-top: 0.3em;
+  margin: 0.3em 0 0 0;
+  padding-left: 1.25em;
+}
+
+.ResumeContainer li {
+  margin-bottom: 0.2em;
+}
+
+.exp-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin: 0.4em 0 0.5em;
+}
+
+.resume-section {
+  margin-bottom: 2.5em;
+}
+
+.resume-section-title {
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+  margin-bottom: 1.25em;
+  padding-left: 0.75em;
+  border-left: 3px solid $brand-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.resume-page {
+  max-width: 700px;
 }

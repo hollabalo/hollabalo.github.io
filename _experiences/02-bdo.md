@@ -2,7 +2,8 @@
 visible: true
 company: BDO Unibank, Inc.
 duration: August 2013 - June 2015
-position: Programmer/Analyst (Junior Assistant Manager 1)
+position: Programmer / Analyst
+tech: [Java, Spring, Hibernate, Struts, SOAP, REST, Oracle DB, MSSQL, Git]
 ---
 Joined the contact center team that primary handled IVRS related systems. Notable achievements are:
 - Dramatically reduced prepaid mobile reload fraud rate as a result of the API that was created from scratch that mitigated fraud via PIN based security

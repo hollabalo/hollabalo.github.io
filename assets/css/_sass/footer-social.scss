@@ -1,7 +1,11 @@
 /* Social Icons for Footer from https://codepen.io/deutschland2k/pen/qKpdJX */
 
 .rounded-social-buttons {
-  text-align: center;
+  text-align: right;
+
+  @include media-query($on-palm) {
+    text-align: left;
+  }
 }
 
 .rounded-social-buttons .social-button {
