@@ -10,15 +10,15 @@ published: true
     <h1>JM Gerona</h1>
     <p class="hero-role">
       <span class="hero-prompt">❯</span>
-      Master Software Engineer
+      Solutions Architect
       <span class="hero-at">@</span>
       GCash / Mynt
     </p>
-    <p class="hero-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Manila, Philippines</p>
+    <p class="hero-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Taguig City, Metro Manila, Philippines</p>
     <p class="hero-bio">
-      Senior backend engineer with 12+ years building fintech and telco platforms.
-      Currently at GCash crafting distributed Java services that move money for millions of Filipinos.
-      Passionate about containers, cloud-native architecture, and keeping things boring in production.
+      Hands-on Solutions Architect with 13+ years of Java/Spring Boot experience building large-scale fintech platforms.
+      Currently architecting high-availability systems for GCash using Kafka, Kubernetes, AWS, and Alibaba Cloud.
+      AWS Solutions Architect certified, CKAD, and KCNA.
     </p>
     <div class="hero-links">
       <a class="hero-link-btn" href="https://www.linkedin.com/in/jmdgerona" target="_blank">
@@ -37,7 +37,7 @@ published: true
 
 <section class="skills-section">
   <div class="skills-strip">
-    {% assign all_skills = site.skills.languages | concat: site.skills.cloud | concat: site.skills.frameworks | concat: site.skills.tools %}
+    {% assign all_skills = site.skills.languages | concat: site.skills.architecture | concat: site.skills.cloud | concat: site.skills.frameworks | concat: site.skills.tools %}
     {% for skill in all_skills %}
       <span class="skill-tag">{{ skill }}</span>
     {% endfor %}

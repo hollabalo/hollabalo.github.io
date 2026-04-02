@@ -1,12 +1,10 @@
 ---
 visible: true
-company: BDO Unibank, Inc.
+company: BDO Unibank Inc.
 duration: August 2013 - June 2015
 position: Programmer / Analyst
-tech: [Java, Spring, Hibernate, Struts, SOAP, REST, Oracle DB, MSSQL, Git]
+tech: [Java, Spring MVC, Hibernate, Struts, SOAP, RESTful APIs, Oracle DB, MS SQL, Git]
 ---
-Joined the contact center team that primary handled IVRS related systems. Notable achievements are:
-- Dramatically reduced prepaid mobile reload fraud rate as a result of the API that was created from scratch that mitigated fraud via PIN based security
-- Created a fullstack web application from scratch that enabled IVRS administrators to change the system parameters on the fly using the web-based GUI.
-
-Tech stack: Java (Spring, Hibernate, Struts), Shell, SOAP, REST, MSSQL, Oracle DB, Git, Waterfall, Monolith, Web Services
+- Developed Java web services and fullstack back-office applications for BDO's IVRS processing hundreds of thousands of monthly calls (balance inquiries, credit card status, prepaid mobile reload)
+- **Critical Security Enhancement:** Developed Telephone PIN Web Service with enhanced authentication + IVR Prepaid Mobile Reload Limit Detection Web Service with configurable velocity checks (weekly/bi-weekly/monthly) — confirmed by management to have strengthened fraud prevention
+- **IVR Back-Office App (Built from Scratch):** Architected fullstack system using Struts-Spring-Hibernate with Maker-Checker Approval Workflow and Role-Based Access Control (RBAC); built configuration portal for IVR operations team (channel controls, hold music, reload limits, heatmap analytics)
