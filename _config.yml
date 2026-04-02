@@ -1,22 +1,47 @@
-### your site title here
-
 title: JM Gerona
-description: containers | cloud | serverless
+tagline: Master Software Engineer
+description: "Java · Containers · Cloud · Serverless"
+location: Manila, Philippines
 
 baseurl: "" #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
 
 timezone: Asia/Manila
 
+# Skills rendered as tag pills on the homepage and resume
+skills:
+  languages:
+    - Java
+    - Python
+    - Shell
+  cloud:
+    - AWS
+    - GCP
+    - Kubernetes
+    - Docker
+    - Serverless
+  frameworks:
+    - Spring Boot
+    - Hibernate
+    - REST
+    - gRPC
+    - Kafka
+  tools:
+    - Git
+    - Maven
+    - Terraform
+    - Jenkins
+    - GitHub Actions
+
+# Social media links
+linkedin: jmdgerona
+stackoverflow: makalshrek
+github: jmgerona
+
 # Pagination
 paginate: 4
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
-
-# Social media links in footer
-linkedin: jmdgerona
-stackoverflow: makalshrek
-github: jmgerona
 
 # Markdown
 highlighter: rouge
@@ -57,7 +82,7 @@ plugins:
   - jekyll-email-protect
   - jekyll-target-blank
 
-#collection
+# Collections
 collections:
   projects:
     output: true
@@ -72,4 +97,3 @@ collections:
 
   experiences:
     output: false
-

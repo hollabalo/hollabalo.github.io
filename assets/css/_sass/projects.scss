@@ -1,121 +1,124 @@
-/* Project Page */
+/* =============================================
+   PROJECTS PAGE
+   ============================================= */
+
 .ProjectContainer {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
+.ProjectContainer h1 {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+  margin-bottom: 1.5em;
+  padding-left: 0.75em;
+  border-left: 3px solid $brand-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+/* Gallery grid — uses the same .projects-grid / .project-card defined in style.scss
+   The old tile classes below are kept for backward compat but redirected to card style */
+
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  /* Compensate for excess margin on outer gallery flex items */
-  margin: -1rem -1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1em;
 }
 
 .projectTile {
-  /* Minimum width of 200px and grow to fit available space */
-  flex: 1 0 200px;
-  border-radius: 15px;
-  background: $projectbox;
-  @media (prefers-color-scheme: dark) {
-    background: $projectbox-dark;
-  }
-  height: 200px;
-  width: 100%;
+  background: $surface-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
   overflow: hidden;
-  display: table;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 120px;
+  display: flex;
+  align-items: stretch;
+
+  &:hover {
+    border-color: $brand-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: $surface-color-light;
+    border-color: $border-color-light;
+
+    &:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 .projectTile a {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25em 1.4em;
+  width: 100%;
+  color: $text-color;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
+  }
 }
 
 .projectTile a span {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .projectTile a span h2 {
-  font-size: 1.5rem;
-  padding: 1rem;
-  color: $projectbox-text;
+  font-size: 1em;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 0.4em;
+  padding: 0;
+  transition: color 0.2s;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
+  }
 }
 
 .projectTile:hover a span h2 {
-  display: none;
+  display: block;
+  color: $brand-color;
 }
 
 .projectTile a span p {
-  display: none;
+  font-size: 0.85em;
+  color: $text-muted;
+  margin: 0;
+  line-height: 1.5;
+  display: block;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
 }
 
 .projectTile:hover a span p {
-  font-size: 1.2rem;
-  display: flex;
-  padding: 1rem;
-  color: $projectbox-text;
+  display: block;
+  padding: 0;
+  font-size: 0.85em;
+  color: $text-muted;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
 }
 
 @include media-query($on-phone) {
-  @media screen and (max-width: $on-phone){
-
-    .projectTile {
-      height: 80px;
-    }
-
-    .projectTile a span h2 {
-      font-size: 1.2rem;
-    }
-
-    .projectTile:hover a span p {
-      display: none;
-    }
-
-    .projectTile:hover a span h2 {
-      display: flex;
-    }
-
-
-  }
-}
-
-@include media-query($on-palm) {
-  @media screen and (max-width: $on-palm){
-
-    .projectTile {
-      height: 100px;
-    }
-
-    .projectTile a span h2 {
-      font-size: 1.3rem;
-    }
-
-    .projectTile:hover a span p {
-      display: none;
-    }
-
-    .projectTile:hover a span h2 {
-      display: flex;
-    }
-
-  }
-}
-
-
-@supports (display: grid) {
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 2rem;
-  }
-
-  .gallery,
-  .gallery-item {
-    margin: 0;
+    grid-template-columns: 1fr;
   }
 }
-
-//Based on: https://codepen.io/GeorgePark/pen/vdqYom

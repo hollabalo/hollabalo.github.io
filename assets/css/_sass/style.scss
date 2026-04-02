@@ -1,74 +1,70 @@
+/* =============================================
+   BASE
+   ============================================= */
+
 html, body {
   height: 100%;
 }
 
 body {
-  max-width: $content-width;
   font-family: $base-font-family;
-  margin: 0 auto;
-  line-height: $base-line-height;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
   color: $text-color;
   background-color: $body-bg;
-  padding: 2em 1em;
+  margin: 0;
+  padding: 0;
   text-rendering: optimizeLegibility;
-  height: 100%;
+  -webkit-font-smoothing: antialiased;
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $body-bg-dark;
-    color: $text-color-dark;
+  @media (prefers-color-scheme: light) {
+    background-color: $body-bg-light;
+    color: $text-color-light;
   }
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 1.8;
-  margin: 0;
-  text-transform: inherit;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  color: $text-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
+  }
 }
 
+p {
+  margin: 0 0 1em 0;
+}
 
 a {
   color: $brand-color;
   text-decoration: none;
-  &:hover{
-    color: $text-color;
+  transition: color 0.2s ease;
 
-    @media (prefers-color-scheme: dark) {
-      color: $text-color-dark;
-    }
-
+  &:hover {
+    color: $brand-light;
   }
 }
-
-
 
 p a {
   color: $text-color;
   text-decoration: none;
-  background: -webkit-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: -moz-linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
-  background: linear-gradient(transparent 90%, lighten($brand-color, 10%) 10%);
+  background: linear-gradient(transparent 88%, rgba($brand-color, 0.4) 12%);
+  transition: background 0.2s ease, color 0.2s ease;
 
-  -webkit-box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
-  box-shadow: inset 0 0 0 0 lighten($brand-color, 10%);
-
-
-  -webkit-transition: box-shadow ease 1s;
-  -moz-transition: box-shadow ease 1s;
-  transition: box-shadow ease 1s;
   &:hover {
-    color: lighten($background-color, 50%);
-    -webkit-box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-    box-shadow: inset 0 -100px 0 0 lighten($brand-color, 10%);
-
+    background: linear-gradient(transparent 0%, rgba($brand-color, 0.25) 0%);
+    color: $brand-light;
   }
 
-  @media (prefers-color-scheme: dark) {
-    color: $text-color-dark;
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
   }
 }
-
 
 figure {
   margin: 0;
@@ -78,12 +74,28 @@ img {
   max-width: 100%;
 }
 
-pre,
-code {
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: 2em 0;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
+}
+
+pre, code {
   overflow: auto;
-  font-size: 0.7*$base-font-size;
-  border-radius: 3px;
-  border: 1px solid $brand-color;
+  font-size: 0.82em;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  background-color: $surface-color;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+    background-color: $surface-color-light;
+  }
+
   > code {
     border: none;
   }
@@ -94,128 +106,779 @@ pre {
 }
 
 code {
-  padding: 0.1em;
+  padding: 0.15em 0.4em;
 }
 
 blockquote {
-  border-left: 2px solid $brand-color;
+  border-left: 3px solid $brand-color;
   padding-left: 1em;
-  font-family: Georgia,Times,Times New Roman,serif;
-  font-size: 0.9*$base-font-size;
+  margin-left: 0;
   font-style: italic;
-}
+  color: $text-muted;
+  font-size: 0.95em;
 
-.site-title {
-  font-size: 2.5em;
-  margin-bottom: -0.4em;
-
-  @include media-query($on-palm) {
-    font-size: 2em;
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
   }
 }
 
-.site-description {
-  font-size: .8em;
-  font-weight: lighter;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+
+  th, td {
+    padding: 0.6em 1em;
+    border: 1px solid $border-color;
+    text-align: left;
+
+    @media (prefers-color-scheme: light) {
+      border-color: $border-color-light;
+    }
+  }
+
+  th {
+    background-color: $surface-color;
+    color: $brand-color;
+
+    @media (prefers-color-scheme: light) {
+      background-color: $surface-color-light;
+      color: $text-color-light;
+    }
+  }
 }
 
+
+/* =============================================
+   LAYOUT
+   ============================================= */
+
+.page-main {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 2em 1.5em 4em;
+
+  @include media-query($on-palm) {
+    padding: 1.5em 1em 3em;
+  }
+}
+
+
+/* =============================================
+   HEADER & NAVIGATION
+   ============================================= */
+
+.site-header {
+  background-color: $surface-color;
+  border-bottom: 1px solid $border-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  @media (prefers-color-scheme: light) {
+    background-color: $surface-color-light;
+    border-color: $border-color-light;
+  }
+}
+
+.header-inner {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+
+  @include media-query($on-palm) {
+    padding: 0 1em;
+  }
+}
+
+.site-brand {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: $brand-color;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $brand-light;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75em;
+
+  a {
+    color: $text-muted;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      color: $brand-color;
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $text-muted-light;
+
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+
+  @include media-query($on-phone) {
+    gap: 1em;
+  }
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.site-footer {
+  border-top: 1px solid $border-color;
+  background-color: $surface-color;
+  padding: 1.5em 0;
+
+  @media (prefers-color-scheme: light) {
+    background-color: $surface-color-light;
+    border-color: $border-color-light;
+  }
+}
+
+.footer-inner {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75em;
+
+  @include media-query($on-palm) {
+    padding: 0 1em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.copy {
+  color: $text-muted;
+  font-size: 0.82em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+
+/* =============================================
+   HERO SECTION (Homepage)
+   ============================================= */
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 2.5em 0 2.5em;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 2.5em;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
+
+  @include media-query($on-palm) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25em;
+    padding: 2em 0;
+  }
+}
+
+.hero-avatar {
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, darken($brand-color, 10%), $brand-color);
+  color: $body-bg;
+  font-size: 1.6em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.02em;
+
+  @include media-query($on-palm) {
+    width: 72px;
+    height: 72px;
+    font-size: 1.3em;
+  }
+}
+
+.hero-info {
+  flex: 1;
+
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.15em;
+
+    @include media-query($on-palm) {
+      font-size: 1.65em;
+    }
+  }
+}
+
+.hero-role {
+  font-size: 1em;
+  color: $brand-color;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+
+.hero-location {
+  font-size: 0.875em;
+  color: $text-muted;
+  margin-bottom: 0.75em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.hero-bio {
+  font-size: 0.95em;
+  color: $text-muted;
+  line-height: 1.65;
+  margin-bottom: 1.25em;
+  max-width: 540px;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+
+  @include media-query($on-palm) {
+    max-width: 100%;
+  }
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+
+  @include media-query($on-palm) {
+    justify-content: center;
+  }
+}
+
+.hero-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.45em 1em;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid $border-color;
+  color: $text-color;
+  background: $surface-color;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: $brand-color;
+    color: $brand-color;
+    background: rgba($brand-color, 0.08);
+  }
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+    color: $text-color-light;
+    background: $surface-color-light;
+
+    &:hover {
+      border-color: $brand-color;
+      color: $brand-color;
+      background: rgba($brand-color, 0.06);
+    }
+  }
+}
+
+
+/* =============================================
+   SKILLS STRIP
+   ============================================= */
+
+.skills-section {
+  margin-bottom: 2.5em;
+}
+
+.skills-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: $text-muted;
+  background: $surface-color;
+  border: 1px solid $border-color;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+    background: $surface-color-light;
+    border-color: $border-color-light;
+
+    &:hover {
+      color: $brand-color;
+      border-color: $brand-color;
+    }
+  }
+}
+
+
+/* =============================================
+   FEATURED SECTIONS (Homepage)
+   ============================================= */
+
+.featured-section {
+  margin-bottom: 3em;
+}
+
+.section-heading {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+  margin-bottom: 1.25em;
+  padding-left: 0.75em;
+  border-left: 3px solid $brand-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.see-all-link {
+  display: inline-block;
+  margin-top: 1em;
+  font-size: 0.85em;
+  color: $text-muted;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+
+/* =============================================
+   PROJECT CARDS (Homepage featured + projects page)
+   ============================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: $surface-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1.25em 1.4em;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: $brand-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-bottom: 0.4em;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      background: none;
+
+      &:hover {
+        color: $brand-color;
+      }
+
+      @media (prefers-color-scheme: light) {
+        color: $text-color-light;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.85em;
+    color: $text-muted;
+    margin: 0;
+    line-height: 1.55;
+
+    @media (prefers-color-scheme: light) {
+      color: $text-muted-light;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: $surface-color-light;
+    border-color: $border-color-light;
+
+    &:hover {
+      border-color: $brand-color;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+
+/* =============================================
+   ARTICLE PREVIEWS (Homepage recent articles)
+   ============================================= */
+
+.article-preview {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.75em 0;
+  border-bottom: 1px solid $border-color;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
+
+  @include media-query($on-palm) {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+}
+
+.article-date {
+  flex-shrink: 0;
+  font-size: 0.78em;
+  color: $text-muted;
+  min-width: 5em;
+  font-variant-numeric: tabular-nums;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.article-preview a {
+  color: $text-color;
+  font-size: 0.95em;
+  background: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $brand-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $text-color-light;
+  }
+}
+
+
+/* =============================================
+   BLOG / POST STYLES
+   ============================================= */
+
+.post-header {
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $border-color;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
+}
+
+.headline, .post-headline {
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2em;
+
+  @include media-query($on-palm) {
+    font-size: 1.4em;
+  }
+}
+
+.post-description {
+  font-size: 0.85em;
+  color: $text-muted;
+  margin-bottom: 0.5em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+/* Blog index post list */
 #recent-articles ul {
-  margin: 0.3em 0 0 0;
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0;
 }
 
 #recent-articles .recent-article-link {
   margin: 0 0.5em 0 0;
 }
 
-
-.headline, .post-headline {
-  font-size: 1.5em;
-  margin-bottom: -0.4em;
-
-  @include media-query($on-palm) {
-    font-size: 1.5em;
-  }
-}
-
-.post-description {
-  font-size: .8em;
-  font-weight: lighter;
-}
-
-/* Pagination style in index/home page */
+/* Pagination */
 .pagination {
-  margin: 2em 0;
+  margin: 2.5em 0;
   text-align: center;
 
-  a {
-    &:hover {
-      background-color: transparent;
-      color: #333;
+  a, span {
+    display: inline-block;
+    padding: 0.4em 0.9em;
+    border: 1px solid $border-color;
+    margin: 0 -1px;
+    font-size: 0.9em;
+    color: $text-muted;
+    background: transparent;
+    transition: color 0.2s, border-color 0.2s;
+
+    @media (prefers-color-scheme: light) {
+      border-color: $border-color-light;
+      color: $text-muted-light;
     }
   }
 
-  a, span {
-    padding: 7px 18px;
-    border: 1px solid #eee;
-    margin-left: -4px;
-    margin-right: -4px;
-    background-color: transparent;
-    display: inline-block;
+  a:hover {
+    border-color: $brand-color;
+    color: $brand-color;
   }
 }
 
 
-/* Add video class for iframes to make them responsive */
-.video {
-  width: 100%;
+/* =============================================
+   ABOUT / RESUME PAGE
+   ============================================= */
+
+.about-header {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid $border-color;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2em;
+  }
 }
 
-/* Add video class for iframes to make them responsive */
+.about-role {
+  color: $brand-color;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+}
+
+.about-location {
+  font-size: 0.875em;
+  color: $text-muted;
+  margin-bottom: 1em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.about-bio {
+  max-width: 600px;
+  color: $text-muted;
+  line-height: 1.7;
+  margin-bottom: 1.25em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+
+.resume-section {
+  margin-bottom: 2.5em;
+}
+
+.resume-section-title {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+  margin-bottom: 1.25em;
+  padding-left: 0.75em;
+  border-left: 3px solid $brand-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.skills-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  @include media-query($on-palm) {
+    flex-direction: column;
+    gap: 1.25em;
+  }
+}
+
+.skills-group h4 {
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $text-muted;
+  margin-bottom: 0.6em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.education-item h3 {
+  font-size: 1em;
+  margin-bottom: 0.15em;
+}
+
+.education-item p {
+  font-size: 0.875em;
+  color: $text-muted;
+  margin: 0;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+.certification-item {
+  color: $text-muted;
+  font-size: 0.9em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+
+/* =============================================
+   MISC UTILITIES
+   ============================================= */
+
 .video {
   width: 100%;
   height: 360px;
+
   @include media-query($on-laptop) {
     height: 300px;
   }
+
   @include media-query($on-palm) {
     height: 180px;
   }
 }
 
-/* Horizontal Divider */
 .divider {
-  margin: 1em;
+  margin: 1.5em 0;
 }
 
-/* Horizontal scrolling navbar. From: https://iamsteve.me/blog/horizontal-scrolling-responsive-menu */
 .scroll {
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar; }
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
-.scroll::-webkit-scrollbar {
-  display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 
-
-/* Button */
 .simplebutton {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 0.9em;
   font-weight: 600;
-  border-radius: 8px;
-  padding: 13px 23px;
-  border: 1px solid #222222;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  background: #fff;
-  color: #222222;
-  :hover {
-      border-color: #000000;
-      background: #f7f7f7;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  border: 1px solid $border-color;
+  background: $surface-color;
+  color: $text-color;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: $brand-color;
+    background: rgba($brand-color, 0.08);
+    color: $brand-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+    background: $surface-color-light;
+    color: $text-color-light;
   }
 }

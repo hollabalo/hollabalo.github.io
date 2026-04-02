@@ -1,21 +1,44 @@
 /* Footer */
-footer {
-    clear: both;
-    margin-top: 2em;
+.site-footer {
+  border-top: 1px solid $border-color;
+  padding: 1.5em 0;
+
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
+  }
 }
 
-/* Footer navigation links */
+.footer-inner {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75em;
+
+  @include media-query($on-palm) {
+    padding: 0 1em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.copy {
+  color: $text-muted;
+  font-size: 0.82em;
+
+  @media (prefers-color-scheme: light) {
+    color: $text-muted-light;
+  }
+}
+
+/* legacy .links used in old nav */
 .links {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .links a {
-    margin-right: 1em;
-}
-
-/* Footer copyrights */
-.copy {
-    color: #aaa;
-    text-align: center;
-    font-size: smaller;
+  margin-right: 1em;
 }

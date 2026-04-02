@@ -1,41 +1,32 @@
-/* Profile */
+/* Profile image (legacy) */
 .profile {
-    border-style: solid;
-    border-color: $light-gray;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-    border-radius: 50%;
-}
+  border: 2px solid $border-color;
+  margin: 0 1rem 1rem;
+  border-radius: 50%;
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-// adjust tile sizes on smaller screens
-@include media-query($on-phone) {
-  @media screen and (max-width: $on-phone){
-
-    .profile {
-      width: 40%;
-    }
-
+  @media (prefers-color-scheme: light) {
+    border-color: $border-color-light;
   }
 }
 
-.home-contents h3{
+.left { float: left; }
+.right { float: right; }
+
+@include media-query($on-phone) {
+  .profile {
+    width: 40%;
+  }
+}
+
+.home-contents h3 {
   margin: 0.5em 0 0 0;
 }
 
+/* WakaTime coding stats embeds */
 .coding-data {
-  background-color: #749F656E;
-  //width: max-content;
+  background-color: rgba($brand-color, 0.12);
   border-radius: 10px;
+  margin-bottom: 1em;
 }
 
 .coding-data embed {
