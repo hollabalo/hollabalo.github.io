@@ -1,7 +1,7 @@
 title: JM Gerona
-tagline: Master Software Engineer
-description: "Java · Containers · Cloud · Serverless"
-location: Manila, Philippines
+tagline: Solutions Architect
+description: "Solutions Architect · AWS SAA · CKAD · KCNA"
+location: Taguig City, Metro Manila, Philippines
 
 baseurl: "" #name of GitHub repository
 url: "" #custom url to be used instead of GitHub repository
@@ -12,26 +12,33 @@ timezone: Asia/Manila
 skills:
   languages:
     - Java
-    - Python
-    - Shell
+    - Golang
+    - Node.js
+    - Shell / AWK
+  architecture:
+    - Event-Driven Architecture
+    - Microservices
+    - Apache Kafka
+    - Distributed Systems
+    - gRPC
   cloud:
-    - AWS
-    - GCP
-    - Kubernetes
+    - AWS (SAA Certified)
+    - Alibaba Cloud
+    - Kubernetes (CKAD)
     - Docker
     - Serverless
   frameworks:
     - Spring Boot
-    - Hibernate
-    - REST
-    - gRPC
-    - Kafka
+    - Spring Batch
+    - Spring MVC
+    - Hibernate / JPA
+    - React
   tools:
     - Git
-    - Maven
-    - Terraform
-    - Jenkins
-    - GitHub Actions
+    - Jenkins / GoCD
+    - Redis
+    - Oracle DB / PostgreSQL
+    - Grafana / Kibana
 
 # Social media links
 linkedin: jmdgerona
