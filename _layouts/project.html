@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="post-container">
+
+  <nav class="post-breadcrumb">
+    <a href="{{ site.baseurl }}/projects/">&larr; Projects</a>
+  </nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.company %}
+        <p class="post-meta">
+          <span class="post-date">{{ page.company }}</span>
+          {% if page.year %}<span class="post-read-time">&middot; {{ page.year }}</span>{% endif %}
+        </p>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+
+  <nav class="post-nav">
+    <div class="post-nav-prev">
+      {% assign all_projects = site.projects %}
+      {% for p in all_projects %}
+        {% if p.url == page.url %}
+          {% if forloop.index0 > 0 %}
+            {% assign prev_index = forloop.index0 | minus: 1 %}
+            {% assign prev_project = all_projects[prev_index] %}
+            <a href="{{ prev_project.url | prepend: site.baseurl }}">&larr; {{ prev_project.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <a class="post-nav-back" href="{{ site.baseurl }}/projects/">All projects</a>
+    <div class="post-nav-next">
+      {% assign all_projects = site.projects %}
+      {% for p in all_projects %}
+        {% if p.url == page.url %}
+          {% assign next_index = forloop.index0 | plus: 1 %}
+          {% assign next_project = all_projects[next_index] %}
+          {% if next_project %}
+            <a href="{{ next_project.url | prepend: site.baseurl }}">{{ next_project.title }} &rarr;</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+
+</div>

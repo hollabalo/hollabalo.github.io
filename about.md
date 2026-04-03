@@ -16,10 +16,11 @@ published: true
   <section class="resume-section">
     <h2 class="resume-section-title">The work side</h2>
     <p>
-      I design and build backend systems at GCash &mdash; event-driven architecture, distributed systems,
-      and the kind of infrastructure that has to work reliably for tens of millions of people at once.
-      I've been writing Java and Spring Boot for 13+ years across fintech, banking, and telco.
-      I'm AWS SAA, CKAD, and KCNA certified, and I still write actual code (not just diagrams).
+      I'm a Solutions Architect — but I spent well over a decade as a software engineer
+      and senior software engineer before getting here, so I still think in code first.
+      I've worked across fintech, banking, and telco building distributed systems,
+      event-driven backends, and the kind of infrastructure that has to stay up no matter what.
+      I'm AWS SAA, CKAD, and KCNA certified.
     </p>
     <p>
       On the side I enjoy building Serverless projects in Node.js. Nice change of pace from the

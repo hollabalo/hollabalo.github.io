@@ -11,17 +11,14 @@ published: true
     <p class="hero-role">
       <span class="hero-prompt">❯</span>
       Solutions Architect
-      <span class="hero-at">@</span>
-      GCash / Mynt
     </p>
     <p class="hero-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Taguig City, Metro Manila, Philippines</p>
     <p class="hero-bio">
-      Hey, I'm JM — a Solutions Architect at GCash where I help design the systems
-      that move money for millions of Filipinos every day. I've been writing Java and
-      building backend platforms for 13+ years across fintech, banking, and telco.
-      These days I'm deep into Kafka, Kubernetes, and event-driven architecture —
-      and I'm AWS SAA, CKAD, and KCNA certified. On weekends I tinker with
-      Serverless projects in Node.js.
+      Hey, I'm JM — a Solutions Architect with a decade-plus of software engineering
+      under my belt, working across fintech, banking, and telco. I started out as a software
+      engineer, grew into senior engineering roles, and now focus on designing
+      distributed systems and event-driven architecture. I'm AWS SAA, CKAD, and KCNA
+      certified. On weekends I tinker with Serverless projects in Node.js.
     </p>
     <div class="hero-links">
       <a class="hero-link-btn" href="https://www.linkedin.com/in/jmdgerona" target="_blank">

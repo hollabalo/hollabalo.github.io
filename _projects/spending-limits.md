@@ -1,15 +1,15 @@
 ---
-layout: post
+layout: project
 title: Spending Limits Breakdown
 description: BSP says show consolidated spending across linked accounts. I designed a parent-child profile architecture that fetches all 5 accounts in a single query, with async cache updates on every transaction.
 featured: false
-company: Globe Fintech Innovations (GCash)
+company: Major Fintech Platform
 year: 2024
 ---
 
 ## Overview
 
-BSP regulatory compliance project requiring GCash to display consolidated spending breakdowns across linked accounts — a user may hold up to 5 accounts under one identity.
+BSP regulatory compliance project requiring a large digital wallet platform to display consolidated spending breakdowns across linked accounts — a user may hold up to 5 accounts under one identity.
 
 ## Architecture
 
