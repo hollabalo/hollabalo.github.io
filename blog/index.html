@@ -3,44 +3,54 @@ layout: default
 title: Articles
 ---
 
-<h2 class="section-heading">Articles</h2>
+<div class="resume-page">
 
-<div class="article-list">
-  {% for post in paginator.posts %}
-    <div class="article-preview" style="padding: 1em 0; border-bottom: 1px solid var(--border, #363c48);">
-      <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </div>
-    {% if post.excerpt %}
-      <p style="font-size:0.875em; color: #8892a4; margin: 0.25em 0 0.75em 0;">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-    {% endif %}
-  {% else %}
-    <p class="certification-item">No articles yet &mdash; stay tuned.</p>
-  {% endfor %}
-</div>
+  <h2 class="resume-section-title" style="margin-bottom: 1.5em;">Articles</h2>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span>{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ site.baseurl }}/blog">{{ page }}</a>
+  <div class="article-list">
+    {% for post in paginator.posts %}
+      <div class="article-list-item">
+        <div class="article-list-meta">
+          <span class="article-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          {% assign words = post.content | number_of_words %}
+          {% assign mins = words | divided_by: 200 %}
+          {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+          <span class="post-read-time">&middot; {{ mins }} min read</span>
+        </div>
+        <a class="article-list-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% if post.excerpt %}
+          <p class="article-list-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        {% endif %}
+      </div>
     {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+      <p class="certification-item">No articles yet &mdash; stay tuned.</p>
+    {% endfor %}
+  </div>
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    {% else %}
+      <span>&laquo; Prev</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span>{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="{{ site.baseurl }}/blog">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    {% else %}
+      <span>Next &raquo;</span>
+    {% endif %}
+  </div>
   {% endif %}
+
 </div>
-{% endif %}
