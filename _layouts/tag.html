@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<div class="tag-container">
+  <nav class="post-breadcrumb">
+    <a href="{{ site.baseurl }}/blog/">&larr; All Articles</a>
+  </nav>
+
+  <header class="tag-header">
+    <h1>Posts tagged with "{{ page.tag }}"</h1>
+    {% assign tag_count = site.tags[page.tag] | size %}
+    <p>{{ tag_count }} post{% if tag_count != 1 %}s{% endif %}</p>
+  </header>
+
+  <div class="article-list">
+    {% assign posts = site.tags[page.tag] | sort: 'date' | reverse %} {% for
+    post in posts %}
+    <article class="article-list-item">
+      <div class="article-list-meta">
+        <span class="article-date">{{ post.date | date: '%B %d, %Y' }}</span>
+        {% assign words = post.content | number_of_words %} {% assign mins =
+        words | divided_by: 200 %} {% if mins < 1 %}{% assign mins = 1 %}{%
+        endif %}
+        <span class="post-read-time">&middot; {{ mins }} min read</span>
+      </div>
+      <a
+        class="article-list-title"
+        href="{{ post.url | prepend: site.baseurl }}"
+        >{{ post.title }}</a
+      >
+      <p class="article-list-excerpt">
+        {{ post.excerpt | strip_html | truncate: 200 }}
+      </p>
+      <div class="post-tags">
+        {% for tag in post.tags %}
+        <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" class="post-tag"
+          >{{ tag }}</a
+        >
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .tag-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .tag-header {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .tag-header h1 {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin: 0 0 0.45rem;
+  }
+
+  .tag-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .tag-posts {
+    margin-top: 0.85rem;
+  }
+
+  .tag-post-preview {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .tag-post-preview h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .tag-post-preview h2 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .tag-post-preview h2 a:hover {
+    color: var(--accent);
+  }
+
+  .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .post-tags {
+    margin-top: 1rem;
+  }
+
+  .post-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+  }
+
+  .post-tag:hover {
+    background: #007acc;
+    color: white;
+  }
+</style>

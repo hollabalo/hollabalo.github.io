@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "I Built an AI-Augmented Workspace So I Can Stop Context-Switching"
+short_title: "AI-Augmented SA Tooling"
 date: 2026-04-02
+tags: [solutions-architecture, ai, productivity, tooling]
 ---
 
 I'm a Solutions Architect. My job is to think deeply about systems — but the meta-work of _tracking_ that thinking was quietly eating me alive.

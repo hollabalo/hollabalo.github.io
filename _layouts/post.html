@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="post-container">
-
   <nav class="post-breadcrumb">
     <a href="{{ site.baseurl }}/blog/">&larr; Articles</a>
   </nav>
@@ -13,36 +12,67 @@ layout: default
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">
         <span class="post-date">{{ page.date | date: '%B %d, %Y' }}</span>
-        {% assign words = content | number_of_words %}
-        {% assign mins = words | divided_by: 200 %}
-        {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+        {% assign words = content | number_of_words %} {% assign mins = words |
+        divided_by: 200 %} {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
         <span class="post-read-time">&middot; {{ mins }} min read</span>
       </p>
+      {% if page.tags %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/" class="post-tag"
+          >{{ tag }}</a
+        >
+        {% endfor %}
+      </div>
+      {% endif %}
     </header>
 
-    <div class="post-content">
-      {{ content }}
-    </div>
+    <div class="post-content">{{ content }}</div>
   </article>
 
   <nav class="post-nav">
     <div class="post-nav-prev">
-      {% if page.previous.url %}
-        <a href="{{ page.previous.url | prepend: site.baseurl }}">&larr; {{ page.previous.title }}</a>
+      {% if page.previous.url %} {% assign prev_label =
+      page.previous.short_title | default: page.previous.title %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}"
+        >&larr; {{ prev_label }}</a
+      >
       {% endif %}
     </div>
     <a class="post-nav-back" href="{{ site.baseurl }}/blog/">All articles</a>
     <div class="post-nav-next">
-      {% if page.next.url %}
-        <a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }} &rarr;</a>
+      {% if page.next.url %} {% assign next_label = page.next.short_title |
+      default: page.next.title %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}"
+        >{{ next_label }} &rarr;</a
+      >
       {% endif %}
     </div>
   </nav>
-
 </div>
 
-{% if page.path contains '_posts' %}
-  {% if site.disqus-shortname %}
-    {% include disqus.html %}
-  {% endif %}
-{% endif %}
+{% if page.path contains '_posts' %} {% if site.disqus-shortname %} {% include
+disqus.html %} {% endif %} {% endif %}
+
+<style>
+  .post-tags {
+    margin-bottom: 1rem;
+  }
+
+  .post-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+  }
+
+  .post-tag:hover {
+    background: #007acc;
+    color: white;
+  }
+</style>
