@@ -21,11 +21,11 @@ social:
     - https://stackoverflow.com/users/hollabaloo
 
 # # Default image for articles (ensure this file exists)
-image: /assets/images/default-og-image.png
+# image: /assets/images/default-og-image.png
 
 # # Twitter handle for twitter card
-twitter:
-  username: jmdgerona
+# twitter:
+#   username: jmdgerona
 
 future: false
 
@@ -72,6 +72,15 @@ github: jmgerona
 paginate: 8
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
+
+# Jekyll Archives (creates archive pages)
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: archive
+  permalinks:
+    category: /categories/:name/
 
 # Markdown
 highlighter: rouge
@@ -153,6 +162,9 @@ plugins:
   - jekyll-paginate
   - jekyll-email-protect
   - jekyll-target-blank
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-last-modified-at
 
 # Collections
 collections:

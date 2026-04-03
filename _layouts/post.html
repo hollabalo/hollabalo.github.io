@@ -12,8 +12,14 @@ layout: default
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">
         <span class="post-date">{{ page.date | date: '%B %d, %Y' }}</span>
-        {% assign words = content | number_of_words %} {% assign mins = words |
-        divided_by: 200 %} {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+        {% if page.last_modified_at and page.last_modified_at != page.date %}
+        <span class="post-modified"
+          >&middot; Updated {{ page.last_modified_at | date: '%B %d, %Y'
+          }}</span
+        >
+        {% endif %} {% assign words = content | number_of_words %} {% assign
+        mins = words | divided_by: 200 %} {% if mins < 1 %}{% assign mins = 1
+        %}{% endif %}
         <span class="post-read-time">&middot; {{ mins }} min read</span>
       </p>
       {% if page.tags %}
@@ -74,7 +80,12 @@ layout: default
   }
 
   .post-tag:hover {
-    background: #007acc;
+    background: var(--accent);
     color: white;
+  }
+
+  .post-modified {
+    color: #888;
+    font-size: 0.9em;
   }
 </style>

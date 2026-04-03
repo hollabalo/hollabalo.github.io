@@ -1,1 +1,18 @@
-[![wakatime](https://wakatime.com/badge/user/bf043753-19e5-4756-9720-23003d03052f/project/5237e670-3ccd-4983-802b-0b477ec1c167.svg)](https://wakatime.com/badge/user/bf043753-19e5-4756-9720-23003d03052f/project/5237e670-3ccd-4983-802b-0b477ec1c167)
+# hollabalo.github.io
+
+Personal website and blog. Built with Jekyll, hosted on GitHub Pages.
+
+## Install dependencies
+
+```bash
+make install
+```
+
+## Serve
+
+```bash
+make serve # regular server
+make serveIncremental # support incremental edits
+```
+
+Open [http://localhost:4000](http://localhost:4000).
