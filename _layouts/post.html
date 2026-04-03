@@ -51,8 +51,10 @@ layout: default
   </nav>
 </div>
 
-{% if page.path contains '_posts' %} {% if site.disqus-shortname %} {% include
-disqus.html %} {% endif %} {% endif %}
+{% if page.path contains '_posts' %}
+<hr class="divider" />
+<div class="comments-section">{% include giscus.html %}</div>
+{% endif %}
 
 <style>
   .post-tags {

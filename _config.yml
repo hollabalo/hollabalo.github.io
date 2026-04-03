@@ -4,9 +4,28 @@ description: "Solutions Architect · AWS SAA · CKAD · KCNA"
 location: Taguig City, Metro Manila, Philippines
 
 baseurl: "" #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
+url: "https://hollabalo.github.io" #custom url to be used instead of GitHub repository
 
 timezone: Asia/Manila
+
+# SEO & Social Media Configuration
+author:
+  name: "JM Gerona"
+  # email: "jmdgerona@gmail.com"
+
+social:
+  name: JM Gerona
+  links:
+    - https://github.com/hollabalo
+    - https://www.linkedin.com/in/jmdgerona
+    - https://stackoverflow.com/users/hollabaloo
+
+# # Default image for articles (ensure this file exists)
+image: /assets/images/default-og-image.png
+
+# # Twitter handle for twitter card
+twitter:
+  username: jmdgerona
 
 future: false
 
@@ -60,6 +79,19 @@ markdown: kramdown
 
 # Tracker
 analytics:
+
+# Giscus (GitHub Discussions comments)
+giscus:
+  repo: "hollabalo/hollabalo.github.io" # your-username/your-repo
+  repo-id: "MDEwOlJlcG9zaXRvcnkzMjE1MzAw" # Get from https://giscus.app setup
+  category: "Blog Comments"
+  category-id: "DIC_kwDOADEPxM4C57sC" # Get from https://giscus.app setup
+  mapping: "pathname" # Discussion mapping (pathname, url, title, og:title, number, specific)
+  reactions-enabled: "1" # Allow reactions (0 or 1)
+  emit-metadata: "0" # Emit discussion metadata (0 or 1)
+  input-position: "top" # Comment input position (top or bottom)
+  theme: "preferred_color_scheme" # light, dark, dark_dimmed, preferred_color_scheme, transparent_dark
+  lang: "en" # Language
 
 # optimization -> compress.html
 compress_html:

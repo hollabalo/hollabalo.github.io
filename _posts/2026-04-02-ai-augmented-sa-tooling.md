@@ -3,6 +3,8 @@ layout: post
 title: "I Built an AI-Augmented Workspace So I Can Stop Context-Switching"
 short_title: "AI-Augmented SA Tooling"
 date: 2026-04-02
+excerpt: "How I automated my Solutions Architecture workflow with AI and local LLMs to eliminate manual tracking, stop context-switching, and keep all my work artifacts synchronized across calendar, Jira, and Google Sheets."
+# image: /assets/images/ai-augmented-sa-tooling.png
 tags: [solutions-architecture, ai, productivity, tooling]
 ---
 

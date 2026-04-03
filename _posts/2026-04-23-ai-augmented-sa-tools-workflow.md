@@ -3,6 +3,8 @@ layout: post
 title: "AI-Augmented Solutions Architecture: Tools and Workflow"
 short_title: "AI Tools and SA Workflow"
 date: 2026-04-23
+excerpt: "A comprehensive guide to selecting the right AI tools for solutions architecture work and implementing a five-phase workflow that leverages AI while protecting human judgment."
+# image: /assets/images/ai-augmented-sa-tools-workflow.png
 tags: [solutions-architecture, ai, productivity]
 ---
 

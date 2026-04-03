@@ -3,6 +3,8 @@ layout: post
 title: "AI-Augmented Solutions Architecture: Foundations"
 short_title: "Foundations of AI-Augmented SA"
 date: 2026-04-09
+excerpt: "Rethinking how Solutions Architects approach their work by treating documentation and diagrams as code, structured for both human and machine consumption."
+# image: /assets/images/ai-augmented-sa-foundations.png
 tags: [solutions-architecture, ai, productivity, documentation, diagrams]
 ---
 

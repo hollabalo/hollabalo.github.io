@@ -3,6 +3,8 @@ layout: post
 title: "AI-Augmented Solutions Architecture: Organization and Structure"
 short_title: "Organizing AI-Augmented SA Work"
 date: 2026-04-16
+excerpt: "How to structure your project folders and workspace for AI to navigate like a human architect would, enabling consistent and useful AI-assisted outputs."
+# image: /assets/images/ai-augmented-sa-organization.png
 tags: [solutions-architecture, ai, productivity]
 ---
 
