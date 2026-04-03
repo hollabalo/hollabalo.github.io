@@ -584,6 +584,152 @@ table {
    POST / ARTICLE PAGE
    ============================================= */
 
+/* =============================================
+   POST PAGE
+   ============================================= */
+
+.post-container {
+  max-width: $content-width;
+}
+
+.post-breadcrumb {
+  margin-bottom: 2em;
+
+  a {
+    font-family: $mono-font-family;
+    font-size: 0.82em;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+  }
+}
+
+.post-header {
+  margin-bottom: 2em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-title {
+  font-size: 2em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+
+  @include media-query($on-palm) {
+    font-size: 1.55em;
+  }
+}
+
+.post-meta {
+  font-family: $mono-font-family;
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.post-read-time {
+  color: var(--text-muted);
+}
+
+.post-content {
+  line-height: 1.85;
+
+  h2, h3, h4 {
+    margin-top: 1.75em;
+  }
+}
+
+.post-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--border);
+  font-size: 0.85em;
+
+  a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent);
+      opacity: 1;
+    }
+  }
+}
+
+.post-nav-prev {
+  flex: 1;
+  text-align: left;
+}
+
+.post-nav-back {
+  flex-shrink: 0;
+  font-family: $mono-font-family;
+  font-size: 0.9em;
+  color: var(--text-muted) !important;
+}
+
+.post-nav-next {
+  flex: 1;
+  text-align: right;
+}
+
+/* =============================================
+   ARTICLES INDEX
+   ============================================= */
+
+.article-list-item {
+  padding: 1.25em 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.article-list-meta {
+  font-family: $mono-font-family;
+  font-size: 0.78em;
+  color: var(--text-muted);
+  margin-bottom: 0.3em;
+}
+
+.article-list-title {
+  display: block;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: 0.35em;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--accent);
+    opacity: 1;
+  }
+}
+
+.article-list-excerpt {
+  font-size: 0.875em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
 .headline, .post-headline {
   font-size: 1.9em;
   font-weight: 800;

@@ -1,14 +1,48 @@
 ---
 layout: default
 ---
-<h3 class="post-headline">{{page.title}}</h3>
-<p class="meta"><small>{{page.date | date: '%B %d, %Y'}}</small></p>
 
-{{content}}
+<div class="post-container">
 
-<!-- Comments only for posts -->
+  <nav class="post-breadcrumb">
+    <a href="{{ site.baseurl }}/blog/">&larr; Articles</a>
+  </nav>
+
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        <span class="post-date">{{ page.date | date: '%B %d, %Y' }}</span>
+        {% assign words = content | number_of_words %}
+        {% assign mins = words | divided_by: 200 %}
+        {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+        <span class="post-read-time">&middot; {{ mins }} min read</span>
+      </p>
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+
+  <nav class="post-nav">
+    <div class="post-nav-prev">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url | prepend: site.baseurl }}">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+    </div>
+    <a class="post-nav-back" href="{{ site.baseurl }}/blog/">All articles</a>
+    <div class="post-nav-next">
+      {% if page.next.url %}
+        <a href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </div>
+  </nav>
+
+</div>
+
 {% if page.path contains '_posts' %}
-    {% if site.disqus-shortname %}
-        {% include disqus.html %}
-    {% endif %}
+  {% if site.disqus-shortname %}
+    {% include disqus.html %}
+  {% endif %}
 {% endif %}

@@ -48,26 +48,6 @@ published: true
   </div>
 </section>
 
-<section class="featured-section">
-  <h2 class="section-heading">Featured Projects</h2>
-  <div class="projects-grid">
-    {% assign featured = site.projects | where: "featured", true %}
-    {% if featured.size == 0 %}{% assign featured = site.projects %}{% endif %}
-    {% for project in featured limit: 3 %}
-      <div class="project-card">
-        {% if project.redirect %}
-          <a href="{{ project.redirect }}" target="_blank">
-        {% else %}
-          <a href="{{ project.url | prepend: site.baseurl }}">
-        {% endif %}
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-  <a class="see-all-link" href="{{ site.baseurl }}/projects/">All projects &rarr;</a>
-</section>
 
 <section class="featured-section">
   <h2 class="section-heading">Recent Articles</h2>
