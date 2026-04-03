@@ -3,13 +3,13 @@ layout: project
 title: Account Management Offboarding
 description: How do you process 30 million accounts without breaking production? Kafka for real-time KYC events, Kubernetes CronJobs for the monthly batch run, and a lot of careful design.
 featured: true
-company: Globe Fintech Innovations (GCash)
+company: Major Fintech Platform
 year: 2024
 ---
 
 ## Overview
 
-Architected an event-driven offboarding system for BSP regulatory compliance that processes 30 million GCash accounts — charging 10 PHP monthly maintenance fees to unverified accounts.
+Architected an event-driven offboarding system for BSP regulatory compliance that processes 30 million user accounts — charging monthly maintenance fees to unverified accounts.
 
 ## Architecture
 

@@ -1,15 +1,15 @@
 ---
 layout: project
-title: BDO IVR Back-Office System
-description: Built a full IVRS back-office system from scratch at BDO as a junior dev — Struts/Spring/Hibernate, Maker-Checker approvals, RBAC, and a fraud-prevention PIN service that management actually noticed.
+title: Bank IVR Back-Office System
+description: Built a full IVRS back-office system from scratch at a major bank as a junior dev — Struts/Spring/Hibernate, Maker-Checker approvals, RBAC, and a fraud-prevention PIN service that management actually noticed.
 featured: false
-company: BDO Unibank Inc.
+company: Major Commercial Bank
 year: 2014
 ---
 
 ## Overview
 
-Designed and built a complete fullstack back-office system for BDO's Interactive Voice Response System operations team — from the ground up, solo, as a junior developer.
+Designed and built a complete fullstack back-office system for a major bank's Interactive Voice Response System operations team — from the ground up, solo, as a junior developer.
 
 ## What Was Built
 

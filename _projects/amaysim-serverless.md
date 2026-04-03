@@ -1,15 +1,15 @@
 ---
 layout: project
-title: Serverless Platform — Amaysim
+title: Serverless Platform — Australian MVNO
 description: Four years of serverless-first development at an Australian MVNO — Lambda functions in Node.js, Stripe subscriptions, a React dashboard, and a CI/CD migration I'm still proud of.
 featured: false
-company: Amaysim Philippines / NCSI Philippines
+company: Australian MVNO
 year: 2019
 ---
 
 ## Overview
 
-Four years of serverless-first backend development at Amaysim Philippines, a virtual mobile network operator (MVNO). Heavy use of AWS Lambda, Node.js, and event-driven patterns.
+Four years of serverless-first backend development at an Australian virtual mobile network operator (MVNO). Heavy use of AWS Lambda, Node.js, and event-driven patterns.
 
 ## Projects
 
@@ -26,7 +26,7 @@ Full-stack: React frontend + Node.js serverless backend. Customer-facing account
 Led migration from SnapCI to GoCD using the 3 Musketeers pattern (Docker + Make + Compose) for consistent Lambda deployments across environments.
 
 **Broadband Provisioning**
-Serverless APIs integrating with Australia's NBN (National Broadband Network) for automated service activation on new subscriber signups.
+Serverless APIs integrating with Australia's NBN for automated service activation on new subscriber signups.
 
 ## Tech
 
