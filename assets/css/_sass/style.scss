@@ -868,12 +868,13 @@ table {
   margin-bottom: 0.65em;
 }
 
-// Credly badge row
+// Credly badge row — force light color scheme so badges always render white
 .credly-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25em;
   align-items: flex-start;
+  color-scheme: light;
 }
 
 .education-item h3 {
