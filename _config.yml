@@ -35,8 +35,10 @@ skills:
     - React
   tools:
     - Git
-    - Jenkins / GoCD
+    - Jenkins / GoCD / GitLab CI
+    - ArgoCD
     - Redis
+    - MongoDB
     - Oracle DB / PostgreSQL
     - Grafana / Kibana
 
