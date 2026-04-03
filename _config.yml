@@ -8,6 +8,8 @@ url: "" #custom url to be used instead of GitHub repository
 
 timezone: Asia/Manila
 
+future: false
+
 # Skills rendered as tag pills on the homepage and resume
 skills:
   languages:
@@ -48,7 +50,7 @@ stackoverflow: hollabaloo
 github: jmgerona
 
 # Pagination
-paginate: 4
+paginate: 8
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
@@ -61,7 +63,35 @@ analytics:
 
 # optimization -> compress.html
 compress_html:
-  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  clippings:
+    [
+      html,
+      div,
+      p,
+      ul,
+      td,
+      h1,
+      h2,
+      h3,
+      h4,
+      link,
+      meta,
+      footer,
+      nav,
+      img,
+      header,
+      hr,
+      br,
+      head,
+      style,
+      li,
+      ul,
+      ol,
+      time,
+      main,
+      script,
+      title,
+    ]
   comments: ["<!-- ", " -->"]
   endings: [all]
   ignore:
@@ -76,6 +106,7 @@ sass:
 
 include:
   - _pages
+  - tags
 
 exclude:
   - README.md

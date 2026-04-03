@@ -45,10 +45,9 @@ published: true
   </div>
 </section>
 
-
 <section class="featured-section">
   <h2 class="section-heading">Recent Articles</h2>
-  {% for post in site.posts limit: 3 %}
+  {% for post in site.posts limit: 5 %}
     <div class="article-preview">
       <span class="article-date">{{ post.date | date: "%b %Y" }}</span>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
