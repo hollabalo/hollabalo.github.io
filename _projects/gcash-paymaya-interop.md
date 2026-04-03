@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: GCash–PayMaya Interoperability
 description: Built the API bridge between PayMaya and GCash — and personally caught a live fraud attack in Splunk logs mid-shift. Stopped it, patched it, shipped better rate limiting.
 featured: true

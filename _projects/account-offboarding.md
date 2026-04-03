@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Account Management Offboarding
 description: How do you process 30 million accounts without breaking production? Kafka for real-time KYC events, Kubernetes CronJobs for the monthly batch run, and a lot of careful design.
 featured: true

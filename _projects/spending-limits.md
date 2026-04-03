@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Spending Limits Breakdown
 description: BSP says show consolidated spending across linked accounts. I designed a parent-child profile architecture that fetches all 5 accounts in a single query, with async cache updates on every transaction.
 featured: false

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Unlimited Limits Bug Mitigation
 description: A 2019 migration silently left 15 million accounts without spending limits. I designed the batch remediation system to fix them — zero downtime, off-peak Kubernetes jobs, cache invalidation included.
 featured: true

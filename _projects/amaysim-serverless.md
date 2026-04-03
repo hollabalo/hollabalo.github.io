@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: Serverless Platform — Amaysim
 description: Four years of serverless-first development at an Australian MVNO — Lambda functions in Node.js, Stripe subscriptions, a React dashboard, and a CI/CD migration I'm still proud of.
 featured: false

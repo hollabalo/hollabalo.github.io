@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title: BDO IVR Back-Office System
 description: Built a full IVRS back-office system from scratch at BDO as a junior dev — Struts/Spring/Hibernate, Maker-Checker approvals, RBAC, and a fraud-prevention PIN service that management actually noticed.
 featured: false
