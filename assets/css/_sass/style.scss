@@ -868,14 +868,21 @@ table {
   margin-bottom: 0.65em;
 }
 
-// Credly badge row — color-scheme: light forces iframes to always render
-// in light mode regardless of OS dark/light preference
+// Credly badge row
+// Light mode: iframes render naturally (white background)
+// Dark mode: CSS filter inverts the iframe colors to approximate dark styling
 .credly-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25em;
   align-items: flex-start;
-  color-scheme: light;
+
+  @media (prefers-color-scheme: dark) {
+    iframe {
+      filter: invert(1) hue-rotate(180deg);
+      border-radius: 8px;
+    }
+  }
 }
 
 // Certification tiles (custom dark-styled, links to Credly for verification)
