@@ -30,7 +30,7 @@ published: true
       <a class="hero-link-btn" href="https://www.github.com/jmgerona" target="_blank">
         <i class="fab fa-github"></i> GitHub
       </a>
-      <a class="hero-link-btn" href="https://stackoverflow.com/users/makalshrek" target="_blank">
+      <a class="hero-link-btn" href="https://stackoverflow.com/users/hollabaloo" target="_blank">
         <i class="fab fa-stack-overflow"></i> Stack Overflow
       </a>
       <a class="hero-link-btn hero-link-primary" href="/about/">About Me</a>
