@@ -3,35 +3,49 @@ layout: default
 ---
 
 <div class="resume-page">
-
   <!-- Profile Header -->
   <section class="about-header">
     <h1>{{ site.title }}</h1>
-    <p class="about-role">{{ site.tagline }} &mdash; AWS SAA &middot; CKAD &middot; KCNA</p>
-    <p class="about-location"><i class="fas fa-map-marker-alt"></i> {{ site.location }}</p>
+    <p class="about-role">
+      {{ site.tagline }} &mdash; AWS SAA &middot; CKAD &middot; KCNA
+    </p>
+    <p class="about-location">
+      <i class="fas fa-map-marker-alt"></i> {{ site.location }}
+    </p>
     <p class="about-bio">
-      I'm a Solutions Architect with 13+ years of hands-on Java/Spring Boot experience,
-      currently at GCash where I design systems that serve tens of millions of users daily.
-      My work sits at the intersection of event-driven microservices, distributed systems,
-      and cloud-native architecture on AWS and Alibaba Cloud — and yes, I still write code,
-      not just diagrams. I hold AWS SAA, CKAD, and KCNA certifications. Outside of work,
-      I enjoy building Serverless projects in Node.js.
+      I'm a Solutions Architect with 13+ years of hands-on Java/Spring Boot
+      experience, currently at GCash where I design systems that serve tens of
+      millions of users daily. My work sits at the intersection of event-driven
+      microservices, distributed systems, and cloud-native architecture on AWS
+      and Alibaba Cloud — and yes, I still write code, not just diagrams. I hold
+      AWS SAA, CKAD, and KCNA certifications. Outside of work, I enjoy building
+      Serverless projects in Node.js.
     </p>
     <div class="about-links">
       {% if site.linkedin %}
-        <a class="hero-link-btn" href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-      {% endif %}
-      {% if site.github %}
-        <a class="hero-link-btn" href="https://www.github.com/{{ site.github }}" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      {% endif %}
-      {% if site.stackoverflow %}
-        <a class="hero-link-btn" href="https://stackoverflow.com/users/{{ site.stackoverflow }}" target="_blank">
-          <i class="fab fa-stack-overflow"></i> Stack Overflow
-        </a>
+      <a
+        class="hero-link-btn"
+        href="https://www.linkedin.com/in/{{ site.linkedin }}"
+        target="_blank"
+      >
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      {% endif %} {% if site.github %}
+      <a
+        class="hero-link-btn"
+        href="https://www.github.com/{{ site.github }}"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      {% endif %} {% if site.stackoverflow %}
+      <a
+        class="hero-link-btn"
+        href="https://stackoverflow.com/users/{{ site.stackoverflow }}"
+        target="_blank"
+      >
+        <i class="fab fa-stack-overflow"></i> Stack Overflow
+      </a>
       {% endif %}
     </div>
   </section>
@@ -40,22 +54,24 @@ layout: default
   <section class="resume-section">
     <h2 class="resume-section-title">Work Experience</h2>
     <div class="ResumeContainer">
-      {% for experience in site.experiences reversed %}
-        {% if experience.visible == true %}
-          <div class="experience-item">
-            <h3 class="company">{{ experience.company }}</h3>
-            <h4 class="description">{{ experience.position }} &#124; <span>{{ experience.duration }}</span></h4>
-            {% if experience.tech %}
-              <div class="exp-tech-tags">
-                {% for t in experience.tech %}
-                  <span class="skill-tag">{{ t }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <div class="details">{{ experience.content }}</div>
-          </div>
+      {% for experience in site.experiences reversed %} {% if experience.visible
+      == true %}
+      <div class="experience-item">
+        <h3 class="company">{{ experience.company }}</h3>
+        <h4 class="description">
+          {{ experience.position }} &#124;
+          <span>{{ experience.duration }}</span>
+        </h4>
+        {% if experience.tech %}
+        <div class="exp-tech-tags">
+          {% for t in experience.tech %}
+          <span class="skill-tag">{{ t }}</span>
+          {% endfor %}
+        </div>
         {% endif %}
-      {% endfor %}
+        <div class="details">{{ experience.content }}</div>
+      </div>
+      {% endif %} {% endfor %}
     </div>
   </section>
 
@@ -64,36 +80,39 @@ layout: default
     <h2 class="resume-section-title">Skills</h2>
     <div class="skills-groups">
       {% if site.skills.languages %}
-        <div class="skills-group">
-          <h4>Languages</h4>
-          <div class="skills-strip">
-            {% for s in site.skills.languages %}<span class="skill-tag">{{ s }}</span>{% endfor %}
-          </div>
+      <div class="skills-group">
+        <h4>Languages</h4>
+        <div class="skills-strip">
+          {% for s in site.skills.languages %}<span class="skill-tag"
+            >{{ s }}</span
+          >{% endfor %}
         </div>
-      {% endif %}
-      {% if site.skills.cloud %}
-        <div class="skills-group">
-          <h4>Cloud &amp; Infrastructure</h4>
-          <div class="skills-strip">
-            {% for s in site.skills.cloud %}<span class="skill-tag">{{ s }}</span>{% endfor %}
-          </div>
+      </div>
+      {% endif %} {% if site.skills.cloud %}
+      <div class="skills-group">
+        <h4>Cloud &amp; Infrastructure</h4>
+        <div class="skills-strip">
+          {% for s in site.skills.cloud %}<span class="skill-tag">{{ s }}</span
+          >{% endfor %}
         </div>
-      {% endif %}
-      {% if site.skills.frameworks %}
-        <div class="skills-group">
-          <h4>Frameworks</h4>
-          <div class="skills-strip">
-            {% for s in site.skills.frameworks %}<span class="skill-tag">{{ s }}</span>{% endfor %}
-          </div>
+      </div>
+      {% endif %} {% if site.skills.frameworks %}
+      <div class="skills-group">
+        <h4>Frameworks</h4>
+        <div class="skills-strip">
+          {% for s in site.skills.frameworks %}<span class="skill-tag"
+            >{{ s }}</span
+          >{% endfor %}
         </div>
-      {% endif %}
-      {% if site.skills.tools %}
-        <div class="skills-group">
-          <h4>Tools</h4>
-          <div class="skills-strip">
-            {% for s in site.skills.tools %}<span class="skill-tag">{{ s }}</span>{% endfor %}
-          </div>
+      </div>
+      {% endif %} {% if site.skills.tools %}
+      <div class="skills-group">
+        <h4>Tools</h4>
+        <div class="skills-strip">
+          {% for s in site.skills.tools %}<span class="skill-tag">{{ s }}</span
+          >{% endfor %}
         </div>
+      </div>
       {% endif %}
     </div>
   </section>
@@ -102,37 +121,72 @@ layout: default
   <section class="resume-section">
     <h2 class="resume-section-title">Certifications</h2>
     <div class="cert-tiles">
-
-      <a class="cert-tile" href="https://www.credly.com/badges/e8170fa8-094f-496a-9c5b-7fddec5a9e43/public_url" target="_blank" rel="noopener">
-        <img class="cert-tile-logo" src="https://www.credly.com/badges/e8170fa8-094f-496a-9c5b-7fddec5a9e43/image.png" alt="AWS Certified Solutions Architect Associate badge">
+      <a
+        class="cert-tile"
+        href="https://www.credly.com/badges/e8170fa8-094f-496a-9c5b-7fddec5a9e43/public_url"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="cert-tile-logo"
+          src="{{ site.baseurl }}/assets/images/certifications/aws-saa.png"
+          alt="AWS Certified Solutions Architect Associate"
+        />
         <div class="cert-tile-body">
-          <span class="cert-tile-name">Solutions Architect &mdash; Associate</span>
+          <span class="cert-tile-name"
+            >Solutions Architect &mdash; Associate</span
+          >
           <span class="cert-tile-issuer">Amazon Web Services</span>
           <span class="cert-tile-validity">2024 &ndash; 2027</span>
         </div>
         <span class="cert-tile-verify">Verify &rarr;</span>
       </a>
 
-      <a class="cert-tile" href="https://www.credly.com/badges/88fcdab0-aa5d-4816-a9d4-f4c6bda4340d/public_url" target="_blank" rel="noopener">
-        <img class="cert-tile-logo" src="https://www.credly.com/badges/88fcdab0-aa5d-4816-a9d4-f4c6bda4340d/image.png" alt="Certified Kubernetes Application Developer badge">
+      <a
+        class="cert-tile"
+        href="https://www.credly.com/badges/88fcdab0-aa5d-4816-a9d4-f4c6bda4340d/public_url"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="cert-tile-logo"
+          src="{{ site.baseurl }}/assets/images/certifications/ckad.png"
+          alt="Certified Kubernetes Application Developer"
+        />
         <div class="cert-tile-body">
-          <span class="cert-tile-name">Certified Kubernetes Application Developer</span>
-          <span class="cert-tile-issuer">Cloud Native Computing Foundation</span>
+          <span class="cert-tile-name"
+            >Certified Kubernetes Application Developer</span
+          >
+          <span class="cert-tile-issuer"
+            >Cloud Native Computing Foundation</span
+          >
           <span class="cert-tile-validity">2024 &ndash; 2026</span>
         </div>
         <span class="cert-tile-verify">Verify &rarr;</span>
       </a>
 
-      <a class="cert-tile" href="https://www.credly.com/badges/cd55a11f-47b8-4a68-931a-01548d8d089d/public_url" target="_blank" rel="noopener">
-        <img class="cert-tile-logo" src="https://www.credly.com/badges/cd55a11f-47b8-4a68-931a-01548d8d089d/image.png" alt="Kubernetes and Cloud Native Associate badge">
+      <a
+        class="cert-tile"
+        href="https://www.credly.com/badges/cd55a11f-47b8-4a68-931a-01548d8d089d/public_url"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="cert-tile-logo"
+          src="{{ site.baseurl }}/assets/images/certifications/kcna.png"
+          alt="Kubernetes and Cloud Native Associate"
+        />
         <div class="cert-tile-body">
-          <span class="cert-tile-name">Kubernetes and Cloud Native Associate</span>
-          <span class="cert-tile-issuer">Cloud Native Computing Foundation</span>
+          <span class="cert-tile-name"
+            >Kubernetes and Cloud Native Associate</span
+          >
+          <span class="cert-tile-issuer"
+            >Cloud Native Computing Foundation</span
+          >
           <span class="cert-tile-validity">2024 &ndash; 2027</span>
         </div>
         <span class="cert-tile-verify">Verify &rarr;</span>
       </a>
-
     </div>
   </section>
 
@@ -141,11 +195,13 @@ layout: default
     <h2 class="resume-section-title">Education</h2>
     <div class="education-item">
       <h3>Adamson University</h3>
-      <p>Bachelor of Science in Information Technology &mdash; <strong>Magna Cum Laude</strong></p>
+      <p>
+        Bachelor of Science in Information Technology &mdash;
+        <strong>Magna Cum Laude</strong>
+      </p>
       <p>2008 &ndash; 2012</p>
     </div>
   </section>
-
 </div>
 
 {{ content }}

@@ -135,9 +135,27 @@
 .cert-tile-logo {
   width: 64px;
   height: 64px;
+  min-width: 64px;
   object-fit: contain;
   border-radius: 6px;
-  background-color: var(--bg);
+  background-color: var(--surface);
+}
+
+.cert-tile-badge {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent-dim), var(--accent-glow));
+  border: 1px solid var(--accent);
+}
+
+.cert-tile-badge i {
+  font-size: 2rem;
+  color: var(--accent);
 }
 
 .cert-tile-body {

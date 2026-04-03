@@ -8,7 +8,7 @@ url: "" #custom url to be used instead of GitHub repository
 
 timezone: Asia/Manila
 
-future: true
+future: false
 
 # Skills rendered as tag pills on the homepage and resume
 skills:
@@ -50,7 +50,7 @@ stackoverflow: hollabaloo
 github: jmgerona
 
 # Pagination
-paginate: 4
+paginate: 8
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 

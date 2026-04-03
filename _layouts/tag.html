@@ -14,8 +14,9 @@ layout: default
   </header>
 
   <div class="article-list">
-    {% assign posts = site.tags[page.tag] | sort: 'date' | reverse %} {% for
-    post in posts %}
+    {% assign posts = site.tags[page.tag] %} {% if posts %} {% assign posts =
+    posts | sort: 'date' | reverse %} {% else %} {% assign posts = "" | split:
+    "" %} {% endif %} {% for post in posts %}
     <article class="article-list-item">
       <div class="article-list-meta">
         <span class="article-date">{{ post.date | date: '%B %d, %Y' }}</span>
@@ -123,7 +124,7 @@ layout: default
   }
 
   .post-tag:hover {
-    background: #007acc;
+    background: var(--accent);
     color: white;
   }
 </style>

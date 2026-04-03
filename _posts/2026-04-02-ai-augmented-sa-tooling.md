@@ -91,7 +91,7 @@ The whole pipeline handles one day's work in about 30 seconds.
 
 ## The Offline LLM Integration
 
-Running everything through Claude Code or Cursor is great — but credits aren't free. For repetitive summarization tasks (commit messages, solutioning block descriptions), I wired in **Ollama** running locally via Apple Intelligence.
+Running everything through Claude Code or Cursor is great — but credits aren't free. For repetitive summarization tasks (commit messages, solutioning block descriptions), I wired in a local model pipeline: it uses Apple Intelligence when available, and falls back to **Ollama** otherwise.
 
 Two places this helps:
 
