@@ -722,6 +722,14 @@ table {
   margin-bottom: 0.65em;
 }
 
+// Credly badge row
+.credly-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  align-items: flex-start;
+}
+
 .education-item h3 {
   font-size: 1em;
   margin-bottom: 0.15em;

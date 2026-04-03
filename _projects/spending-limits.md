@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spending Limits Breakdown
-description: Real-time aggregation system for GCash users with up to 5 linked accounts — consolidated spending view with parent-child profile architecture.
+description: BSP says show consolidated spending across linked accounts. I designed a parent-child profile architecture that fetches all 5 accounts in a single query, with async cache updates on every transaction.
 featured: false
 company: Globe Fintech Innovations (GCash)
 year: 2024

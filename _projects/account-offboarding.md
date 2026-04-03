@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Account Management Offboarding
-description: Event-driven system processing 30M GCash accounts for BSP regulatory compliance — Kafka streaming + Kubernetes batch processing.
+description: How do you process 30 million accounts without breaking production? Kafka for real-time KYC events, Kubernetes CronJobs for the monthly batch run, and a lot of careful design.
 featured: true
 company: Globe Fintech Innovations (GCash)
 year: 2024

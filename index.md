@@ -16,9 +16,12 @@ published: true
     </p>
     <p class="hero-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Taguig City, Metro Manila, Philippines</p>
     <p class="hero-bio">
-      Hands-on Solutions Architect with 13+ years of Java/Spring Boot experience building large-scale fintech platforms.
-      Currently architecting high-availability systems for GCash using Kafka, Kubernetes, AWS, and Alibaba Cloud.
-      AWS Solutions Architect certified, CKAD, and KCNA.
+      Hey, I'm JM — a Solutions Architect at GCash where I help design the systems
+      that move money for millions of Filipinos every day. I've been writing Java and
+      building backend platforms for 13+ years across fintech, banking, and telco.
+      These days I'm deep into Kafka, Kubernetes, and event-driven architecture —
+      and I'm AWS SAA, CKAD, and KCNA certified. On weekends I tinker with
+      Serverless projects in Node.js.
     </p>
     <div class="hero-links">
       <a class="hero-link-btn" href="https://www.linkedin.com/in/jmdgerona" target="_blank">
@@ -27,10 +30,11 @@ published: true
       <a class="hero-link-btn" href="https://www.github.com/jmgerona" target="_blank">
         <i class="fab fa-github"></i> GitHub
       </a>
-      <a class="hero-link-btn" href="https://stackoverflow.com/users/makalshrek" target="_blank">
+      <a class="hero-link-btn" href="https://stackoverflow.com/users/hollabaloo" target="_blank">
         <i class="fab fa-stack-overflow"></i> Stack Overflow
       </a>
-      <a class="hero-link-btn hero-link-primary" href="/about/">View Resume &rarr;</a>
+      <a class="hero-link-btn hero-link-primary" href="/about/">About Me</a>
+      <a class="hero-link-btn" href="/cv/">View CV &rarr;</a>
     </div>
   </div>
 </section>
