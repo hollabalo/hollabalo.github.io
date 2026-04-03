@@ -33,7 +33,8 @@ published: true
       <a class="hero-link-btn" href="https://stackoverflow.com/users/makalshrek" target="_blank">
         <i class="fab fa-stack-overflow"></i> Stack Overflow
       </a>
-      <a class="hero-link-btn hero-link-primary" href="/about/">View Resume &rarr;</a>
+      <a class="hero-link-btn hero-link-primary" href="/about/">About Me</a>
+      <a class="hero-link-btn" href="/cv/">View CV &rarr;</a>
     </div>
   </div>
 </section>
