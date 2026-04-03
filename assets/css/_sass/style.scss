@@ -868,24 +868,7 @@ table {
   margin-bottom: 0.65em;
 }
 
-// Credly badge row
-// Light mode: iframes render naturally (white background)
-// Dark mode: CSS filter inverts the iframe colors to approximate dark styling
-.credly-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25em;
-  align-items: flex-start;
-
-  @media (prefers-color-scheme: dark) {
-    iframe {
-      filter: invert(1) hue-rotate(180deg);
-      border-radius: 8px;
-    }
-  }
-}
-
-// Certification tiles (custom dark-styled, links to Credly for verification)
+// Certification tiles
 .cert-tiles {
   display: flex;
   flex-direction: column;
@@ -903,7 +886,7 @@ table {
   border-radius: 8px;
   text-decoration: none;
   border-bottom: 1px solid var(--border);
-  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 
   &:hover {
     background: var(--surface-hover);
@@ -916,32 +899,12 @@ table {
   }
 }
 
-.cert-tile-icon {
+.cert-tile-logo {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.78em;
-  font-family: $mono-font-family;
-  letter-spacing: -0.02em;
-}
-
-.cert-tile-icon--aws {
-  background: #1a2332;
-  border: 1px solid #f90;
-  color: #f90;
-  font-size: 1.6em;
-}
-
-.cert-tile-icon--k8s {
-  background: #0d1b2e;
-  border: 1px solid #326ce5;
-  color: #326ce5;
-  font-size: 0.72em;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .cert-tile-body {
