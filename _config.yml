@@ -95,12 +95,12 @@ collections:
     output: true
     permalink: /projects/:name/
     order:
-      - shortProject.md
-      - longerProjectTitle.md
-      - redirect.md
-      - project4.md
-      - project5.md
-      - project6.md
+      - account-offboarding.md
+      - unlimited-limits.md
+      - gcash-paymaya-interop.md
+      - spending-limits.md
+      - bdo-ivr-backoffice.md
+      - amaysim-serverless.md
 
   experiences:
     output: false
