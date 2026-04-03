@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.sass-cache/
+Disallow: /.jekyll-cache/
+Disallow: /_site/
+Disallow: /vendor/
+
+# Sitemap
+Sitemap: https://hollabalo.github.io/sitemap.xml

@@ -3,6 +3,8 @@ layout: post
 title: "AI-Augmented Solutions Architecture: Getting Started"
 short_title: "Getting Started with AI-Augmented SA"
 date: 2026-04-30
+excerpt: "Practical steps to implement AI-augmented solutions architecture in your work, from initial setup to creating your first complete solution document."
+# image: /assets/images/ai-augmented-sa-getting-started.png
 tags: [solutions-architecture, ai, productivity]
 ---
 
