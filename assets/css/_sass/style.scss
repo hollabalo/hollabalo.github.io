@@ -868,13 +868,95 @@ table {
   margin-bottom: 0.65em;
 }
 
-// Credly badge row — force light color scheme so badges always render white
-.credly-badges {
+// Certification tiles (custom dark-styled, links to Credly for verification)
+.cert-tiles {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25em;
-  align-items: flex-start;
-  color-scheme: light;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.cert-tile {
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+  padding: 1em 1.25em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    background: var(--surface-hover);
+    box-shadow: 0 4px 20px var(--shadow-hover);
+    opacity: 1;
+
+    .cert-tile-verify {
+      color: var(--accent);
+    }
+  }
+}
+
+.cert-tile-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.78em;
+  font-family: $mono-font-family;
+  letter-spacing: -0.02em;
+}
+
+.cert-tile-icon--aws {
+  background: #1a2332;
+  border: 1px solid #f90;
+  color: #f90;
+  font-size: 1.6em;
+}
+
+.cert-tile-icon--k8s {
+  background: #0d1b2e;
+  border: 1px solid #326ce5;
+  color: #326ce5;
+  font-size: 0.72em;
+}
+
+.cert-tile-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+
+.cert-tile-name {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cert-tile-issuer {
+  font-size: 0.78em;
+  color: var(--text-muted);
+}
+
+.cert-tile-validity {
+  font-family: $mono-font-family;
+  font-size: 0.73em;
+  color: var(--accent);
+}
+
+.cert-tile-verify {
+  flex-shrink: 0;
+  font-family: $mono-font-family;
+  font-size: 0.75em;
+  color: var(--text-muted);
+  transition: color 0.2s;
 }
 
 .education-item h3 {
