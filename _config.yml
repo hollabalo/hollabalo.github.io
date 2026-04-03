@@ -18,14 +18,14 @@ social:
   links:
     - https://github.com/hollabalo
     - https://www.linkedin.com/in/jmdgerona
-    - https://stackoverflow.com/users/hollabaloo
+    - https://stackoverflow.com/users/1540638/hollabaloo
 
 # # Default image for articles (ensure this file exists)
 # image: /assets/images/default-og-image.png
 
-# # Twitter handle for twitter card
-# twitter:
-#   username: jmdgerona
+# Twitter handle for twitter card
+twitter:
+  username: makalshrek
 
 future: false
 
