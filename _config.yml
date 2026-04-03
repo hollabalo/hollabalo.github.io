@@ -23,10 +23,6 @@ social:
 # # Default image for articles (ensure this file exists)
 # image: /assets/images/default-og-image.png
 
-# Twitter handle for twitter card
-twitter:
-  username: makalshrek
-
 future: false
 
 # Skills rendered as tag pills on the homepage and resume
