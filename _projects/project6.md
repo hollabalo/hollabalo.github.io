@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Serverless Platform — Amaysim
-description: Collection of serverless Node.js and Java projects at Amaysim Philippines — payments, subscriptions, user dashboard, and CI/CD migration.
+description: Four years of serverless-first development at an Australian MVNO — Lambda functions in Node.js, Stripe subscriptions, a React dashboard, and a CI/CD migration I'm still proud of.
 featured: false
 company: Amaysim Philippines / NCSI Philippines
 year: 2019

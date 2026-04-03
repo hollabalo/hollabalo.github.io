@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GCash–PayMaya Interoperability
-description: REST API enabling real-time money transfers between PayMaya and GCash — processing hundreds of thousands of transactions monthly, plus fraud mitigation.
+description: Built the API bridge between PayMaya and GCash — and personally caught a live fraud attack in Splunk logs mid-shift. Stopped it, patched it, shipped better rate limiting.
 featured: true
 company: PayMaya Philippines
 year: 2016
