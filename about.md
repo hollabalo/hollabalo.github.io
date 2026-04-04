@@ -35,7 +35,7 @@ published: true
     <h2 class="resume-section-title">Guitars</h2>
     <p>
       This is the hobby I've sunk the most money into and have zero regrets about.
-      I have a few: a PRS SE Silver Sky, a PRS SE Standard, a Fender Player II Telecaster,
+      I have a few: a PRS SE Silver Sky, a PRS SE Studio Standard, a Fender Player II Telecaster,
       a Gretsch Electromatic G5622T, a Squier Jazzmaster, a Tagima Strat-style,
       and a Phoebus acoustic for when I want to unplug &mdash; literally.
     </p>
