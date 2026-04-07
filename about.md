@@ -9,7 +9,7 @@ published: true
 
   <section class="about-header">
     <h1>Hey, I'm JM</h1>
-    <p class="about-role">Solutions Architect by day. Guitarist, drummer, and occasional gamer by night.</p>
+    <p class="about-role">Solutions Architect by day. Guitarist, drummer, and series binger by night.</p>
     <p class="about-location"><i class="fas fa-map-marker-alt"></i> Taguig City, Metro Manila, Philippines</p>
   </section>
 
@@ -32,54 +32,31 @@ published: true
   </section>
 
   <section class="resume-section">
-    <h2 class="resume-section-title">Guitars</h2>
+    <h2 class="resume-section-title">Music</h2>
     <p>
       This is the hobby I've sunk the most money into and have zero regrets about.
-      I have a few: a PRS SE Silver Sky, a PRS SE Studio Standard, a Fender Player II Telecaster,
-      a Gretsch Electromatic G5622T, a Squier Jazzmaster, a Tagima Strat-style,
-      and a Phoebus acoustic for when I want to unplug &mdash; literally.
+      My main guitars are a PRS SE Silver Sky and a Gretsch Electromatic G5622T &mdash; plus a handful
+      of others for different moods. The main board is built around a Line6 HX Stomp; there's also
+      a smaller analog chain for when I want to keep it simple.
     </p>
     <p>
-      I run three pedalboards. The main one is built around a Line6 HX Stomp
-      with a Strymon TimeLine and BigSky in the effects loop. The second is a more traditional
-      analog chain. The third is a small practice board for when I just want to noodle without
-      setting everything up. The main and second boards were both put together by GitRig Customs.
-    </p>
-  </section>
-
-  <section class="resume-section">
-    <h2 class="resume-section-title">Drums &amp; bass</h2>
-    <p>
-      I'm no expert on drums but I can hold a beat. I have a Tama Club Mini Kit with Zildjian I Series
-      cymbals &mdash; compact enough for a Manila apartment. I also have a JCraft Precision Bass that I pick up
-      whenever I want to think like the rhythm section for a change.
-    </p>
-  </section>
-
-  <section class="resume-section">
-    <h2 class="resume-section-title">Games (casually)</h2>
-    <p>
-      I don't game as much as I used to, but racing games and Pok&eacute;mon are my comfort zones.
-      Pok&eacute;mon Go and Pok&eacute;mon TCG on my phone keep me going. I have an Anbernic RG35XX H
-      for retro stuff that mostly sits on my desk looking cool.
-    </p>
-    <p>
-      College-me would spend whole weekends on the PSP &mdash; Metal Gear, Need for Speed,
-      Patapon, LocoRoco. Those were good times.
+      I also play drums &mdash; nothing fancy, just a Tama Club Mini Kit that fits the apartment &mdash;
+      and I pick up a bass whenever I want to think like the rhythm section for a change.
     </p>
   </section>
 
   <section class="resume-section">
     <h2 class="resume-section-title">How I unwind</h2>
     <p>
-      ASMR barber videos &mdash; specifically Japanese and Turkish ones. I stumbled into this rabbit hole in 2016
-      and never left. Also: disaster movies, anything Adam Sandler is in, and long drives.
-      There's something about being behind the wheel with nowhere urgent to be that resets everything.
+      A lot of YouTube &mdash; mostly relaxing, low-stakes stuff. Disaster movies and anything Adam Sandler
+      is in also qualify. Long drives too, when I can.
     </p>
     <p>
-      For series I do a lot of comfort rewatches: Friends, How I Met Your Mother, Brooklyn Nine-Nine,
-      Modern Family. When I want something heavier: Breaking Bad, Better Call Saul, The Walking Dead.
-      Lately I've been enjoying 9-1-1 and High Potential.
+      For series I lean heavily on comfort rewatches. When I want something heavier I'll go for the
+      prestige crime dramas. Lately I've been into 9-1-1 and High Potential.
+    </p>
+    <p>
+      I don't game as much as I used to, but racing games and Pok&eacute;mon still get time on my phone.
     </p>
   </section>
 
