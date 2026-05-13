@@ -72,7 +72,7 @@ make eod
 
 ### Step 2: Infer solutioning time blocks
 
-`infer_solutioning.py` reads my git history for the day and reconstructs what I actually worked on. It cross-references my calendar (pulling accepted meetings first) so the inferred blocks don't overlap with real meetings. Then it pushes enriched time blocks to a dedicated "JM Gerona Tasks" Google Calendar.
+`infer_solutioning.py` reads my git history for the day and reconstructs what I actually worked on. It cross-references my calendar (pulling accepted meetings first) so the inferred blocks don't overlap with real meetings. Then it pushes enriched time blocks to a dedicated "JM Tasks" Google Calendar.
 
 The enrichment is the interesting part. Each block gets annotated with:
 
