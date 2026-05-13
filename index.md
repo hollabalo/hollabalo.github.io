@@ -7,7 +7,7 @@ published: true
 <section class="hero">
   <div class="hero-avatar">JG</div>
   <div class="hero-info">
-    <h1>JM Gerona</h1>
+    <h1>JM</h1>
     <p class="hero-role">
       <span class="hero-prompt">❯</span>
       Solutions Architect
