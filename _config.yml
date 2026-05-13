@@ -1,4 +1,4 @@
-title: JM Gerona
+title: JM
 tagline: Solutions Architect
 description: "Solutions Architect · AWS SAA · CKAD · KCNA"
 location: Taguig City, Metro Manila, Philippines
@@ -10,11 +10,11 @@ timezone: Asia/Manila
 
 # SEO & Social Media Configuration
 author:
-  name: "JM Gerona"
+  name: "JM"
   # email: "jmdgerona@gmail.com"
 
 social:
-  name: JM Gerona
+  name: JM
   links:
     - https://github.com/hollabalo
     - https://www.linkedin.com/in/jmdgerona

@@ -1,5 +1,5 @@
 ---
-title: About — JM Gerona
+title: About — JM
 layout: default
 permalink: /about/
 published: true
